@@ -38,7 +38,7 @@ The novelty is the AI operating model, not the underlying risk principles.
 
 Unlike lighter pre-mortem skills that mainly structure brainstorming, `PreMortemX` is designed as a governed decision-support system:
 - specialist risk lenses instead of one undifferentiated pass
-- orchestrated adjudication instead of naive vote counting
+- an agent team with orchestrated adjudication instead of naive vote counting
 - evidence-backed decisions instead of intuition-heavy output
 - structured approvals and overrides instead of silent judgment shifts
 - calibration from reviewed cases instead of learning blindly from raw history
@@ -56,6 +56,20 @@ PreMortemX was deliberately shaped around established risk-assessment and govern
 - auditability of decisions, approvals, and later calibration changes
 
 These practices are the north star. The AI layer is how they are operationalized inside Codex.
+
+### Why these specialist roles exist
+
+The agent team was deliberately shaped to simulate the kinds of roles found in real-world risk assessment and governance processes.
+
+Instead of one generic model trying to do everything, `PreMortemX` uses specialist roles that mirror how an actual risk team separates concerns:
+- domain and implementation risk
+- operational and release risk
+- security and privacy risk
+- evidence review
+- policy and decision review
+- final adjudication by the orchestrator
+
+That makes the system more than a prompt pattern. It is an AI translation of a real assessment-team structure.
 
 ---
 
