@@ -132,6 +132,7 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - reviewed-run promotion states: `trusted`, `provisional`, `excluded`
 - calibration change requests and approvals
 - local-only authority with optional cloud-advisory edges
+- fully usable in local-first mode with no required external API dependency
 
 ### Roadmap
 

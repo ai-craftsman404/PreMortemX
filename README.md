@@ -21,6 +21,8 @@ Risk assessment is a well-established engineering discipline, but it is often sl
 
 **PreMortemX brings that discipline into Codex.** It uses specialist AI risk lenses, orchestrated adjudication, evidence-backed outputs, and governed calibration so teams can move faster without treating risk analysis like generic AI brainstorming.
 
+It is fully usable in local-first mode with no required external API dependency.
+
 ---
 
 ## Why PreMortemX
