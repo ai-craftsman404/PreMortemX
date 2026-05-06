@@ -32,6 +32,31 @@ Engineering teams already know how to do risk assessment, but the process is usu
 
 The novelty is the AI operating model, not the underlying risk principles.
 
+### What makes it different
+
+`PreMortemX` is not just a guided pre-mortem prompt.
+
+Unlike lighter pre-mortem skills that mainly structure brainstorming, `PreMortemX` is designed as a governed decision-support system:
+- specialist risk lenses instead of one undifferentiated pass
+- orchestrated adjudication instead of naive vote counting
+- evidence-backed decisions instead of intuition-heavy output
+- structured approvals and overrides instead of silent judgment shifts
+- calibration from reviewed cases instead of learning blindly from raw history
+
+That distinction matters most in regulated or higher-accountability environments where teams need discipline, traceability, and repeatable governance rather than a clever prompt alone.
+
+### Risk-governance principles carried into the design
+
+PreMortemX was deliberately shaped around established risk-assessment and governance practices, including:
+- evidence-first judgment
+- explicit adjudication and accountability
+- severity, uncertainty, and confidence treated as separate signals
+- conservative handling of incomplete evidence
+- human-governed escalation and override paths
+- auditability of decisions, approvals, and later calibration changes
+
+These practices are the north star. The AI layer is how they are operationalized inside Codex.
+
 ---
 
 ## Quick Start
@@ -93,6 +118,12 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - reviewed-run promotion states: `trusted`, `provisional`, `excluded`
 - calibration change requests and approvals
 - local-only authority with optional cloud-advisory edges
+
+### Roadmap
+
+- `v1`: release-first pre-mortem gating with structured artifacts and overrides
+- `v2`: architecture validation, stronger registry views, quality follow-up, and trend summaries
+- `v3`: multi-agent adjudication, governed calibration, reviewed-run promotion, and approval-controlled change flows
 
 ### Decision model
 
