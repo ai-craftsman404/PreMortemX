@@ -11,6 +11,10 @@
 
 [**Quick Start**](#quick-start) · [**Why PreMortemX**](#why-premortemx) · [**Example Output**](#example-output) · [**Plugin Docs**](#plugin-docs)
 
+<img src="assets/premortemx-hero.png" alt="PreMortemX operating model showing specialist agents feeding a central orchestration hub and producing an evidence-weighted recommendation." width="960">
+
+<sub>Operating model: evidence flows through specialist agents, centralized adjudication, and gated recommendation output.</sub>
+
 </div>
 
 ---
