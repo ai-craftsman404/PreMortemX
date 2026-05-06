@@ -1,0 +1,14 @@
+runs/**
+!runs/.gitkeep
+
+registry/runs/**
+!registry/runs/.gitkeep
+registry/views/
+registry/quality-review-log.json
+
+calibration/*.sqlite
+
+STATUS.md
+archive/
+design/
+RELEASE-CHECKLIST.md

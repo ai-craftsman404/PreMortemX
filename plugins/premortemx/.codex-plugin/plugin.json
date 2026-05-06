@@ -1,0 +1,36 @@
+{
+  "name": "premortemx",
+  "version": "0.3.0",
+  "description": "Evidence-backed pre-mortem analysis for Codex, now with multi-agent adjudication, calibration workflows, structured approvals, and adaptive guardrails.",
+  "author": {
+    "name": "Code Plugin Guru"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "pre-mortem",
+    "release-risk",
+    "risk-analysis",
+    "harness"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PreMortemX",
+    "shortDescription": "Pre-mortem risk analysis with multi-agent adjudication and calibration.",
+    "longDescription": "PreMortemX helps Codex users stress-test releases before execution and validate architectures before implementation by combining pre-mortem reasoning, specialist AI lenses, orchestrated adjudication, readable decision artifacts, calibration workflows, and a lightweight harness for auditability and improvement.",
+    "developerName": "Code Plugin Guru",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write",
+      "Local execution"
+    ],
+    "defaultPrompt": [
+      "Use PreMortemX to run an evidence-backed pre-mortem on this release plan and return a clear Pass, Warn, or Block decision.",
+      "Use PreMortemX to validate this architecture and identify credible design risks before implementation.",
+      "Assess this design-to-release bundle for credible release blockers and explain the result in plain language.",
+      "Run a release-risk pre-mortem with structured override handling and local audit artifacts."
+    ],
+    "brandColor": "#8C3B2F"
+  }
+}

@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+plugins/premortemx/runs/**
+!plugins/premortemx/runs/.gitkeep
+
+plugins/premortemx/registry/runs/**
+!plugins/premortemx/registry/runs/.gitkeep
+plugins/premortemx/registry/views/
+plugins/premortemx/registry/quality-review-log.json
+
+plugins/premortemx/calibration/*.sqlite
