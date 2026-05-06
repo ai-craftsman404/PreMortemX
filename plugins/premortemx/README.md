@@ -1,24 +1,90 @@
+<div align="center">
+
 # PreMortemX
 
-PreMortemX is a Codex plugin for evidence-backed pre-mortem release gating and architecture validation. It helps Codex users inspect release or architecture bundles, validate risk claims against evidence, and produce readable Pass / Warn / Block decisions with structured override support.
+### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication and governed calibration.
 
-## Product positioning
+[![Version](https://img.shields.io/badge/version-0.3.0-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
+[![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
-PreMortemX is not trying to invent a new risk-assessment discipline.
+[**Quick Start**](#quick-start) · [**How It Works**](#how-it-works) · [**Capabilities**](#capabilities) · [**Testing**](#testing)
 
-Its differentiator is that it applies established risk-assessment practice through an AI operating model:
-- specialist AI agents working from distinct risk lenses
-- orchestrated deliberation instead of naive vote counting
-- final adjudication by a central orchestrator
-- evidence-backed recommendations and decisions
-- calibration and maintenance over time using curated reviewed signals
+</div>
 
-This is the main adoption story for v3:
-- familiar and disciplined risk-assessment structure
-- faster and more scalable execution through specialist AI collaboration
-- human-governed, auditable outcomes instead of opaque model intuition
+---
 
-## V3 highlights
+## The Problem
+
+Engineering teams already know how to do risk assessment, but the process is usually slow, inconsistent, and hard to maintain. Important risks get missed, weak concerns get over-weighted, and decision records are often too thin to be useful later.
+
+**PreMortemX applies established risk-assessment practice through an AI operating model.** It uses specialist risk lenses, orchestrated adjudication, evidence-backed outputs, and calibration-ready records so teams can make faster decisions without abandoning disciplined governance.
+
+---
+
+## Why PreMortemX
+
+- applies familiar risk-assessment discipline instead of inventing a new methodology
+- uses specialist AI lenses instead of a single generic analysis pass
+- resolves internal disagreement through orchestrated adjudication
+- keeps final output readable, concise, and evidence-backed
+- supports calibration and governance over time through reviewed signals
+
+The novelty is the AI operating model, not the underlying risk principles.
+
+---
+
+## Quick Start
+
+### 1. Open the plugin package in Codex
+
+Codex should discover the plugin from the local marketplace metadata in this repo.
+
+### 2. Install or enable `PreMortemX`
+
+Use the Codex Plugins UI to install and enable the plugin.
+
+### 3. Run a prompt
+
+```text
+$premortemx Run a pre-mortem on this release plan and tell me whether we should ship.
+```
+
+```text
+$premortemx Validate this architecture and identify the top design risks before implementation.
+```
+
+### 4. Run the local test suite
+
+```powershell
+powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
+```
+
+---
+
+## How It Works
+
+| Step | What happens |
+|------|-------------|
+| **1. Route** | `PreMortemX` determines whether release-risk gating or architecture validation is the right mode |
+| **2. Inspect** | It gathers docs, code context, tests, and supporting artifacts available in the local bundle |
+| **3. Deliberate** | Specialist risk lenses assess the case and the orchestrator adjudicates the result |
+| **4. Decide** | The plugin returns `Pass`, `Warn`, or `Block` with concise supporting evidence |
+| **5. Record** | Run artifacts, registry updates, and optional quality review data are written locally |
+| **6. Calibrate** | Reviewed runs can be promoted into a governed calibration dataset over time |
+
+By design, the user sees the adjudicated outcome rather than raw internal debate.
+
+---
+
+## Capabilities
+
+### Core assessment modes
+
+- `release-risk-gating`
+- `architecture-validation`
+
+### V3 highlights
 
 - multi-agent deliberation with orchestrator adjudication
 - rubric-backed override logic with internal `1-5` grading
@@ -28,33 +94,20 @@ This is the main adoption story for v3:
 - calibration change requests and approvals
 - local-only authority with optional cloud-advisory edges
 
-## What it does
+### Decision model
 
-- release-first pre-mortem analysis
-- architecture validation before implementation
-- docs + code + test evidence grounding
-- tiered human-facing reports
-- machine-readable run records
-- structured Block override capture
-- privacy-first retention and adaptive approvals
-- stronger local registry summaries
-- local guardrail-memory recommendations
-- quality-review updates and trend summaries
-- quality-aware registry dashboards
+- `Pass`: adequate evidence, low residual risk, no warn/block rule triggered
+- `Warn`: meaningful uncertainty or credible medium risk
+- `Block`: credible high-severity risk or aggregate threshold breach
 
-## V3 scope
+A `Block` may be overridden by a human, but the override must preserve:
+- rationale
+- mitigation steps
+- responsible owner
 
-- release risk gating
-- architecture validation
-- hybrid routing with targeted Q&A when confidence is low
-- local-first run artifacts and registry index
-- local registry summary view
-- optional sensitive-artifact encryption decision left to the human
-- multi-agent adjudication recorded in `deliberation.json`
-- calibration store and promotion flow for reviewed runs
-- no mandatory external services
+---
 
-## Plugin structure
+## Project Structure
 
 ```text
 plugins/premortemx/
@@ -66,126 +119,67 @@ plugins/premortemx/
   calibration/
 ```
 
-## Skills
+### Key scripts
 
-- `premortemx`: main release-risk pre-mortem skill
+- `New-PreMortemXRun.ps1`
+- `Invoke-PreMortemXDeliberation.ps1`
+- `Test-PreMortemXRunRecord.ps1`
+- `Update-PreMortemXRegistry.ps1`
+- `Update-PreMortemXQualityReview.ps1`
+- `Initialize-PreMortemXCalibrationStore.ps1`
+- `Import-PreMortemXReviewedRunToCalibration.ps1`
+- `Request-PreMortemXCalibrationChange.ps1`
+- `Approve-PreMortemXCalibrationChange.ps1`
 
-## Scripts
+### Key artifacts
 
-- `New-PreMortemXRun.ps1`: create a new run directory, run record, and report templates
-- `Update-PreMortemXRegistry.ps1`: append a run to the local registry index
-- `Test-PreMortemXRunRecord.ps1`: validate required run-record fields and decision format
-- `Invoke-PreMortemXDeliberation.ps1`: run orchestrator-led specialist adjudication and update deliberation artifacts
-- `Get-PreMortemXRegistrySummary.ps1`: summarize runs by mode and decision
-- `Build-PreMortemXRegistryViews.ps1`: build materialized registry views for operators
-- `Get-PreMortemXGuardrailRecommendations.ps1`: recommend whether to stay conservative or consider broader approved access based on prior runs
-- `Update-PreMortemXQualityReview.ps1`: record later outcome review for a run
-- `Get-PreMortemXTrendSummary.ps1`: summarize quality outcomes across reviewed runs
-- `Initialize-PreMortemXCalibrationStore.ps1`: create the local SQLite calibration store
-- `Import-PreMortemXReviewedRunToCalibration.ps1`: promote a reviewed run into calibration storage
-- `Set-PreMortemXCalibrationPromotionState.ps1`: change calibration promotion state with audit logging
-- `Request-PreMortemXCalibrationChange.ps1`: create a calibration change request
-- `Approve-PreMortemXCalibrationChange.ps1`: approve or reject a calibration change request
-- `Get-PreMortemXCalibrationSummary.ps1`: summarize calibration cases and change requests
-- `Get-PreMortemXAdvisoryDelegationPlan.ps1`: show the local-authority and optional-advisory delegation boundary
-
-Registry views now also fold in quality-review outcomes and pending follow-up counts.
-
-## Run artifacts
-
-PreMortemX uses run directories under:
-
-```text
-plugins/premortemx/runs/YYYY/MM/<run-id>/
-```
-
-Typical artifacts:
-
+- `run-record.json`
+- `analysis.json`
+- `deliberation.json`
 - `summary-short.md`
 - `summary-standard.md`
 - `summary-exec.md`
 - `risk-register.md`
-- `run-record.json`
-- `analysis.json`
-- `approvals.json`
-- `retention.json`
-- `override.md`
-- `evidence-index.md`
-- `deliberation.json`
 
-Registry files:
+---
 
-- `registry/runs/index.jsonl`
-- `registry/quality-review-log.json`
+## Testing
 
-Calibration files:
+Current local validation covers:
 
-- `calibration/premortemx-calibration.sqlite`
+- run initialization
+- schema validation
+- orchestrator deliberation
+- registry updates and dashboards
+- quality review logging
+- calibration store initialization
+- reviewed-run import and promotion flow
+- calibration change requests and approvals
+- advisory-boundary reporting
 
-## Decision model
-
-- `Pass`: adequate evidence, low residual risk, no warn/block rule triggered
-- `Warn`: meaningful uncertainty or credible medium risk
-- `Block`: credible high-severity risk or aggregate threshold breach
-
-A `Block` can be overridden by a human, but the override must preserve:
-- rationale
-- mitigation steps
-- responsible owner
-
-Supported modes:
-- `release-risk-gating`
-- `architecture-validation`
-
-## Install and discovery
-
-Typical local install flow:
-
-1. Download or clone the plugin package.
-2. Open the plugin workspace in Codex.
-3. Install or enable `PreMortemX` from the Codex Plugins UI.
-4. Invoke it in chat with `$premortemx`.
-
-## Example prompts
-
-- `$premortemx Run a pre-mortem on this release plan and tell me whether we should ship.`
-- `$premortemx Validate this architecture and identify the top design risks before implementation.`
-- `$premortemx Assess this design, diff summary, and test output for credible release blockers.`
-- `$premortemx Override this block and record the rationale, mitigation, and owner.`
-- `$premortemx Smoke test this plugin and confirm it is active.`
-
-## Local testing
-
-Run the script test suite:
+Primary test entrypoint:
 
 ```powershell
 powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
 ```
 
-## Validation model
+Related public docs:
 
-PreMortemX is considered ready only when:
+- [CHANGELOG.md](CHANGELOG.md)
+- [TEST-MATRIX.md](TEST-MATRIX.md)
+- [SECURITY-REVIEW.md](SECURITY-REVIEW.md)
 
-- feature-level acceptance criteria exist
-- adversarial evaluator scenarios are defined
-- run artifacts are readable and machine-validated
-- privacy and permission behavior are documented
+---
 
 ## Limitations
 
-- `PreMortemX` currently focuses on release and architecture risk work, not every engineering decision type.
-- `PreMortemX` uses local scripts rather than an MCP-backed harness runtime.
-- `PreMortemX` does not require AgentFS, though its isolation model informed the design direction.
+- `PreMortemX` currently focuses on release and architecture risk work, not every engineering decision type
+- it uses local scripts rather than an MCP-backed runtime
+- optional cloud-advisory behavior is intentionally non-authoritative
+- calibration quality depends on user-curated reviewed data
 
-## V3 Direction
+---
 
-The current v3 direction is:
-- structured multi-agent deliberation
-- specialist risk agents with orchestrator synthesis
-- rationale-backed orchestrator override
-- calibration workflows using user-supplied curated datasets
+## License
 
-The intended calibration model is explicit:
-- dataset quality is the user’s responsibility
-- PreMortemX should educate users on what a good calibration dataset looks like
-- poor datasets should be treated as a calibration risk, not as trusted truth
+[MIT](LICENSE)
