@@ -84,8 +84,9 @@ $premortemx Validate this architecture and identify the top design risks before 
 - `v4` is Python-first
 - the Python runtime is the default execution path for normal plugin use
 - the legacy PowerShell runtime is preserved as fallback compatibility
-- Windows is fully validated for both runtimes
-- Linux and macOS are intended to use the Python runtime path
+- Windows is validated
+- Linux is validated through the Python runtime path
+- macOS is reasonably expected to work through Python, but is not yet validated end to end
 
 ---
 
