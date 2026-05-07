@@ -2,12 +2,13 @@
 
 ## 0.4.0 - 2026-05-07
 
-- added a parallel Python runtime path for cross-platform execution without changing the existing v3 PowerShell behavior
+- moved `PreMortemX` to a Python-first cross-platform runtime contract
+- kept the existing PowerShell runtime intact as fallback compatibility
 - added Python implementations for core run creation, run-record validation, and orchestrator deliberation
 - added Python implementations for registry updates, registry summaries/views, quality reviews, trend summaries, guardrail recommendations, and advisory-boundary reporting
 - added Python wrappers around the calibration store flow for initialization, import, summary, promotion-state changes, and approval-controlled calibration changes
-- added end-to-end Python runtime validation covering run creation, deliberation, registry, reviews, and calibration flow
-- kept the existing PowerShell runtime fully intact so v3 users are not disrupted during migration
+- aligned the skill, manifest, testing surface, and public docs to the Python-first `v4` runtime contract
+- expanded Python end-to-end validation to the same release-critical behavior shape as the established PowerShell suite
 
 ## 0.3.0 - 2026-05-06
 

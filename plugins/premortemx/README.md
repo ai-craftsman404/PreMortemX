@@ -2,7 +2,7 @@
 
 # PreMortemX
 
-### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication, governed calibration, and a new Python runtime path.
+### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication, governed calibration, and a Python-first cross-platform runtime.
 
 [![Version](https://img.shields.io/badge/version-0.4.0-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
 [![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
@@ -86,14 +86,14 @@ That makes the system more than a prompt pattern. It is an AI translation of a r
 
 Codex should discover the plugin from the local marketplace metadata in this repo.
 
-### Runtime Options
+### Runtime Contract
 
-- current implementation supports both:
-  - the original PowerShell runtime
-  - a new parallel Python runtime path
-- Windows is fully validated for both runtime paths
-- Linux and macOS are now better aligned for local runtime use through Python
-- PowerShell (`pwsh`) is still supported, but it is no longer the only practical runtime path
+- `v4` is Python-first
+- the Python runtime is the default execution path for normal plugin use
+- the legacy PowerShell runtime is preserved as fallback compatibility
+- Windows is fully validated for both runtimes
+- Linux and macOS are intended to use the Python runtime path
+- `pwsh` support remains available, but it is not the primary `v4` path
 
 ### 2. Install or enable `PreMortemX`
 
@@ -121,14 +121,12 @@ $premortemx Validate this architecture and identify the top design risks before 
 - confirm local marketplace metadata is present at `.agents/plugins/marketplace.json`
 - reopen the repo root in Codex and check the Plugins UI again
 
-### 6. Run the local test suite
-
 ```powershell
-powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
 ```
 
 ```powershell
-python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
+powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
 ```
 
 ---
@@ -183,9 +181,9 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 
 ### V4 highlights
 
-- parallel Python runtime for cross-platform execution
+- Python-first runtime for cross-platform execution
 - Python implementations for core run creation, validation, deliberation, registry, review, and calibration flows
-- existing PowerShell runtime preserved for backward compatibility
+- existing PowerShell runtime preserved as fallback compatibility
 
 ### Roadmap
 
@@ -220,15 +218,15 @@ plugins/premortemx/
 
 ### Key scripts
 
-- `New-PreMortemXRun.ps1`
-- `Invoke-PreMortemXDeliberation.ps1`
-- `Test-PreMortemXRunRecord.ps1`
-- `Update-PreMortemXRegistry.ps1`
-- `Update-PreMortemXQualityReview.ps1`
-- `Initialize-PreMortemXCalibrationStore.ps1`
-- `Import-PreMortemXReviewedRunToCalibration.ps1`
-- `Request-PreMortemXCalibrationChange.ps1`
-- `Approve-PreMortemXCalibrationChange.ps1`
+- `New-PreMortemXRun.py`
+- `Invoke-PreMortemXDeliberation.py`
+- `Test-PreMortemXRunRecord.py`
+- `Update-PreMortemXRegistry.py`
+- `Update-PreMortemXQualityReview.py`
+- `Initialize-PreMortemXCalibrationStore.py`
+- `Import-PreMortemXReviewedRunToCalibration.py`
+- `Request-PreMortemXCalibrationChange.py`
+- `Approve-PreMortemXCalibrationChange.py`
 
 ### Key artifacts
 
@@ -257,6 +255,12 @@ Current local validation covers:
 - advisory-boundary reporting
 
 Primary test entrypoint:
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
+```
+
+Compatibility test entrypoint:
 
 ```powershell
 powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1

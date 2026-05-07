@@ -2,8 +2,8 @@
 
 ## Release
 
-- Version: `0.3.0`
-- Date: `2026-05-06`
+- Version: `0.4.0`
+- Date: `2026-05-07`
 
 ## Security posture
 
@@ -24,10 +24,38 @@
 
 - run artifacts remain under `plugins/premortemx/runs/`
 - registry state remains under `plugins/premortemx/registry/`
-- no destructive filesystem actions are built into v3 scripts
+- no destructive filesystem actions are built into the runtime scripts
 - calibration storage is local SQLite under the plugin directory
 
 ## Script review
+
+### `New-PreMortemXRun.py`
+
+- primary `v4` run-initialization path
+- creates local run directories and template artifacts
+- writes only under the plugin’s own directories
+- no network dependency
+
+### `Invoke-PreMortemXDeliberation.py`
+
+- primary `v4` orchestrator adjudication path
+- records specialist-lens findings and orchestrator adjudication locally
+- no network dependency
+- preserves human escalation when uncertainty and sensitivity remain high
+
+### `Update-PreMortemXRegistry.py`
+
+- primary `v4` registry-update path
+- appends local metadata to JSONL registry index
+- does not broaden scope or exfiltrate data
+
+### `Test-PreMortemXRunRecord.py`
+
+- primary `v4` validation path
+- validates local run-record structure only
+- no side effects beyond reading the specified record
+
+### Legacy PowerShell fallback
 
 ### `New-PreMortemXRun.ps1`
 
@@ -81,4 +109,4 @@ Mitigations:
 
 ## Conclusion
 
-PreMortemX `0.3.0` is acceptable for local-first release and architecture risk use with governed calibration workflows, provided the documented privacy, approval, and evaluator guidance are followed and the plugin is not misrepresented as a fully autonomous release authority.
+PreMortemX `0.4.0` is acceptable for local-first release and architecture risk use with a Python-first cross-platform runtime, governed calibration workflows, and PowerShell fallback compatibility, provided the documented privacy, approval, and evaluator guidance are followed and the plugin is not misrepresented as a fully autonomous release authority.

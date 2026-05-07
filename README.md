@@ -2,7 +2,7 @@
 
 # PreMortemX
 
-### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication, governed calibration, and a new Python runtime path.
+### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication, governed calibration, and a Python-first cross-platform runtime.
 
 [![Version](https://img.shields.io/badge/version-0.4.0-8C3B2F?style=flat-square)](plugins/premortemx/.codex-plugin/plugin.json)
 [![CI](https://img.shields.io/github/actions/workflow/status/ai-craftsman404/PreMortemX/ci.yml?style=flat-square&label=CI)](https://github.com/ai-craftsman404/PreMortemX/actions/workflows/ci.yml)
@@ -81,9 +81,11 @@ $premortemx Validate this architecture and identify the top design risks before 
 - Codex discovery depends on `.agents/plugins/marketplace.json` being present at the repo root
 - after opening the repo, check the Codex Plugins UI for `PreMortemX`
 - if the plugin does not appear, reopen the repo root and confirm `.agents/plugins/marketplace.json` is still present
-- current implementation supports both the original PowerShell runtime and a new Python runtime path
-- Windows is fully validated for both runtime paths
-- Linux and macOS are better aligned for local runtime use through Python
+- `v4` is Python-first
+- the Python runtime is the default execution path for normal plugin use
+- the legacy PowerShell runtime is preserved as fallback compatibility
+- Windows is fully validated for both runtimes
+- Linux and macOS are intended to use the Python runtime path
 
 ---
 

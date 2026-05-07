@@ -2,7 +2,7 @@
 
 ## Scope
 
-This matrix covers the `0.4.0` release, including the legacy PowerShell runtime and the new parallel Python runtime path.
+This matrix covers the `0.4.0` release, with the Python-first runtime path as the primary `v4` contract and the legacy PowerShell runtime retained as fallback compatibility.
 
 ## Manifest and discovery
 
@@ -46,9 +46,12 @@ These hardening checks are intentionally tracked as follow-up reliability work r
 - [x] calibration change request and approval flow are validated
 - [x] advisory delegation boundary output is validated
 - [x] `New-PreMortemXRun.py` creates run directory and templates
+- [x] `New-PreMortemXRun.py` creates valid architecture-validation runs
 - [x] `Test-PreMortemXRunRecord.py` validates required schema fields
+- [x] invalid decision values fail Python validation
 - [x] `Invoke-PreMortemXDeliberation.py` completes orchestrator-led adjudication
 - [x] Python registry, review, trend, guardrail, and advisory scripts are validated
+- [x] Python registry summary and dashboard incorporate quality-review outcomes and pending follow-up counts
 - [x] Python calibration init/import/summary/promotion/approval flow is validated
 
 ## Artifact contract
@@ -85,9 +88,9 @@ These hardening checks are intentionally tracked as follow-up reliability work r
 ## Local validation commands
 
 ```powershell
-powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
 ```
 
 ```powershell
-python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
+powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
 ```
