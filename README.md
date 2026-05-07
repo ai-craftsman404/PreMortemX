@@ -81,6 +81,9 @@ $premortemx Validate this architecture and identify the top design risks before 
 - Codex discovery depends on `.agents/plugins/marketplace.json` being present at the repo root
 - after opening the repo, check the Codex Plugins UI for `PreMortemX`
 - if the plugin does not appear, reopen the repo root and confirm `.agents/plugins/marketplace.json` is still present
+- current implementation depends on PowerShell scripts
+- Windows is the primary validated environment today
+- Linux and macOS may work with PowerShell (`pwsh`) installed, but are not yet fully validated end to end
 
 ---
 

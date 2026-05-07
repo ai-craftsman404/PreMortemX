@@ -86,6 +86,12 @@ That makes the system more than a prompt pattern. It is an AI translation of a r
 
 Codex should discover the plugin from the local marketplace metadata in this repo.
 
+### Runtime Requirement
+
+- current implementation uses PowerShell scripts for artifact generation, registry updates, and validation
+- Windows is the primary validated environment today
+- Linux and macOS may work if PowerShell (`pwsh`) is installed, but that path is not yet fully validated end to end
+
 ### 2. Install or enable `PreMortemX`
 
 Use the Codex Plugins UI to install and enable the plugin.
