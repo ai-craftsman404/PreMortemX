@@ -21,8 +21,10 @@ This matrix covers the `0.3.0` release, architecture, multi-agent, calibration, 
 
 ## Wrong-trigger boundaries
 
-- [ ] general brainstorming prompt should not force release gating
-- [ ] generic coding request should not be reframed as a release review without cause
+These hardening checks are intentionally tracked as follow-up reliability work rather than claimed as complete in the public `0.3.0` release surface:
+
+- generic brainstorming prompt should not force release gating
+- generic coding request should not be reframed as a release review without cause
 
 ## Script behavior
 

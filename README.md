@@ -37,6 +37,13 @@ It is fully usable in local-first mode with no required external API dependency.
 - keeps decisions readable, evidence-backed, and auditable
 - supports calibration over time through reviewed runs and controlled promotion
 
+### Trust Boundary
+
+- works in local-first mode with no required external API dependency
+- has no built-in network dependency for normal operation
+- uses human-governed approvals before broader access or higher-permission behavior
+- keeps final release or architecture decisions human-governed, not autonomous
+
 ### Who this is for
 
 - teams making release or architecture decisions with real accountability
