@@ -148,6 +148,17 @@ flowchart LR
 
 ---
 
+## Version Evolution
+
+| Version | Main focus | What changed |
+|------|------|------|
+| `v1` | Release-first pre-mortem gating | Added `Pass` / `Warn` / `Block`, structured artifacts, local registry, and override handling |
+| `v2` | Broader assessment coverage | Added `architecture-validation`, stronger registry views, guardrail recommendations, quality review logging, and trend summaries |
+| `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
+| `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
+
+---
+
 ## Repo Layout
 
 ```text
