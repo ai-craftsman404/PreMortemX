@@ -88,6 +88,8 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 Review a committed sanitized example bundle here:
 
+<img src="assets/premortemx-artifact-preview.png" alt="PreMortemX example artifacts showing executive summary, orchestrator adjudication, and risk register snapshot." width="960">
+
 - [Executive summary](plugins/premortemx/examples/sample-warn-release/summary-exec.md)
 - [Standard summary](plugins/premortemx/examples/sample-warn-release/summary-standard.md)
 - [Risk register](plugins/premortemx/examples/sample-warn-release/risk-register.md)
