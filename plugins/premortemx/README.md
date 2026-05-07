@@ -8,7 +8,7 @@
 [![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
-[**Quick Start**](#quick-start) · [**How It Works**](#how-it-works) · [**Capabilities**](#capabilities) · [**Testing**](#testing)
+[**Quick Start**](#quick-start) · [**Example Artifacts**](#example-artifacts) · [**How It Works**](#how-it-works) · [**Capabilities**](#capabilities) · [**Testing**](#testing)
 
 </div>
 
@@ -29,6 +29,13 @@ Engineering teams already know how to do risk assessment, but the process is usu
 - resolves internal disagreement through orchestrated adjudication
 - keeps final output readable, concise, and evidence-backed
 - supports calibration and governance over time through reviewed signals
+
+### Trust Boundary
+
+- works in local-first mode with no required external API dependency
+- has no built-in network dependency for normal operation
+- uses human-governed approvals before broader access or higher-permission behavior
+- keeps final release or architecture decisions human-governed, not autonomous
 
 The novelty is the AI operating model, not the underlying risk principles.
 
@@ -110,6 +117,21 @@ $premortemx Validate this architecture and identify the top design risks before 
 ```powershell
 powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
 ```
+
+---
+
+## Example Artifacts
+
+Review a committed sanitized example bundle here:
+
+- [examples/sample-warn-release/README.md](examples/sample-warn-release/README.md)
+- [examples/sample-warn-release/summary-exec.md](examples/sample-warn-release/summary-exec.md)
+- [examples/sample-warn-release/summary-standard.md](examples/sample-warn-release/summary-standard.md)
+- [examples/sample-warn-release/risk-register.md](examples/sample-warn-release/risk-register.md)
+- [examples/sample-warn-release/evidence-index.md](examples/sample-warn-release/evidence-index.md)
+- [examples/sample-warn-release/deliberation.json](examples/sample-warn-release/deliberation.json)
+
+This bundle shows the artifact shape for a realistic `Warn` outcome without requiring you to install the plugin first.
 
 ---
 

@@ -9,7 +9,7 @@
 [![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-8C3B2F?style=flat-square)](plugins/premortemx/.codex-plugin/plugin.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
-[**Quick Start**](#quick-start) · [**Why PreMortemX**](#why-premortemx) · [**Example Output**](#example-output) · [**Plugin Docs**](#plugin-docs)
+[**Quick Start**](#quick-start) · [**Real Example Bundle**](#real-example-bundle) · [**Why PreMortemX**](#why-premortemx) · [**Example Output**](#example-output) · [**Plugin Docs**](#plugin-docs)
 
 <img src="assets/premortemx-hero.png" alt="PreMortemX operating model showing specialist agents feeding a central orchestration hub and producing an evidence-weighted recommendation." width="960">
 
@@ -81,6 +81,20 @@ $premortemx Validate this architecture and identify the top design risks before 
 - Codex discovery depends on `.agents/plugins/marketplace.json` being present at the repo root
 - after opening the repo, check the Codex Plugins UI for `PreMortemX`
 - if the plugin does not appear, reopen the repo root and confirm `.agents/plugins/marketplace.json` is still present
+
+---
+
+## Real Example Bundle
+
+Review a committed sanitized example bundle here:
+
+- [Executive summary](plugins/premortemx/examples/sample-warn-release/summary-exec.md)
+- [Standard summary](plugins/premortemx/examples/sample-warn-release/summary-standard.md)
+- [Risk register](plugins/premortemx/examples/sample-warn-release/risk-register.md)
+- [Evidence index](plugins/premortemx/examples/sample-warn-release/evidence-index.md)
+- [Deliberation artifact](plugins/premortemx/examples/sample-warn-release/deliberation.json)
+
+This is a realistic `Warn` example, included so visitors can inspect the actual artifact structure before installing the plugin.
 
 ---
 

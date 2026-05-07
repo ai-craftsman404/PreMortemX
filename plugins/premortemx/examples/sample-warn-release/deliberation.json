@@ -1,0 +1,99 @@
+{
+  "rubric": {
+    "gradingScale": "1-5",
+    "decisionSensitivity": 4,
+    "evidenceStrength": 3,
+    "confidence": 3,
+    "sourceProvenance": 3,
+    "calibratedPatternFit": 3,
+    "mitigationReadiness": 2,
+    "disagreementLevel": 2,
+    "riskSeverity": 3,
+    "evidenceCompleteness": 2,
+    "policyFit": 3,
+    "contradictoryArtifactPressure": 1
+  },
+  "sharedRoles": [
+    "Evidence Auditor",
+    "Decision Policy Reviewer",
+    "Orchestrator"
+  ],
+  "version": "3.0",
+  "specialists": [
+    {
+      "role": "Domain Risk Specialist",
+      "decision": "Warn",
+      "confidenceBand": "Medium",
+      "summary": "Core release intent looks viable, but evidence is thin around failure-path behavior and residual operational risk.",
+      "keyEvidenceRefs": [
+        "EV-02",
+        "EV-05"
+      ]
+    },
+    {
+      "role": "Operational/Release Risk Specialist",
+      "decision": "Warn",
+      "confidenceBand": "Medium-High",
+      "summary": "The largest concern is rollout control. A phased release without concrete rollback triggers is not release-ready enough for a `Pass`.",
+      "keyEvidenceRefs": [
+        "EV-01",
+        "EV-04",
+        "EV-03"
+      ]
+    },
+    {
+      "role": "Security/Privacy Risk Specialist",
+      "decision": "Pass",
+      "confidenceBand": "Medium",
+      "summary": "No direct security blocker is evident in the inspected bundle, but limited evidence lowers confidence.",
+      "keyEvidenceRefs": [
+        "EV-02"
+      ]
+    }
+  ],
+  "adjudicatedBy": "orchestrator",
+  "adjudication": {
+    "summary": "The orchestrator upheld a `Warn` because the dominant risks are evidence and operational-control gaps rather than a hard design failure.",
+    "finalDecision": "Warn",
+    "finalConfidenceBand": "Medium",
+    "decisionOwner": "Release manager",
+    "ruleTriggered": "evidence-gated default",
+    "humanEscalationConsidered": false,
+    "residualRiskAfterMitigation": "Low-Medium",
+    "supportingEvidence": [
+      "Rollback criteria and owner are not explicit in the release plan.",
+      "Negative-path reliability evidence is incomplete for auth-refresh and upstream timeout scenarios.",
+      "Monitoring and escalation ownership are referenced but not operationalized."
+    ],
+    "decisionPath": [
+      "Specialists agreed that no direct hard blocker was evident, but operational-control evidence was incomplete.",
+      "The operational/release lens weighted rollback readiness as the primary decision driver.",
+      "The security lens did not identify a direct security defect, but its softer posture did not outweigh the broader evidence gap.",
+      "Override testing was unnecessary because the consensus remained within `Warn` and no severity/policy backstop was triggered."
+    ],
+    "uncertaintyDrivers": [
+      "fresh failure-path test evidence was missing",
+      "first-day monitoring ownership was implied but not explicit"
+    ]
+  },
+  "agreement": {
+    "summary": "Specialists generally agree on a `Warn`, with only the security lens leaning softer because no direct security defect is visible.",
+    "disagreementLevel": 2,
+    "consensusDecision": "Warn"
+  },
+  "specialistRoles": [
+    "Domain Risk Specialist",
+    "Operational/Release Risk Specialist",
+    "Security/Privacy Risk Specialist"
+  ],
+  "status": "completed",
+  "overrideModel": {
+    "humanEscalationReasons": [],
+    "defaultTrigger": "evidence-gated",
+    "backstopTrigger": "severity-and-policy",
+    "overrideApplied": false,
+    "humanEscalationRequired": false,
+    "overrideReason": null,
+    "overrideTestSummary": "No override was applied because the consensus remained `Warn` and the evidence-weighting outcome did not justify a stricter or softer decision."
+  }
+}
