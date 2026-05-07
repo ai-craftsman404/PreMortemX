@@ -2,7 +2,7 @@
 
 ## Scope
 
-This matrix covers the `0.3.0` release, architecture, multi-agent, calibration, and approval-control plugin build.
+This matrix covers the `0.4.0` release, including the legacy PowerShell runtime and the new parallel Python runtime path.
 
 ## Manifest and discovery
 
@@ -45,6 +45,11 @@ These hardening checks are intentionally tracked as follow-up reliability work r
 - [x] calibration promotion-state changes are recorded
 - [x] calibration change request and approval flow are validated
 - [x] advisory delegation boundary output is validated
+- [x] `New-PreMortemXRun.py` creates run directory and templates
+- [x] `Test-PreMortemXRunRecord.py` validates required schema fields
+- [x] `Invoke-PreMortemXDeliberation.py` completes orchestrator-led adjudication
+- [x] Python registry, review, trend, guardrail, and advisory scripts are validated
+- [x] Python calibration init/import/summary/promotion/approval flow is validated
 
 ## Artifact contract
 
@@ -81,4 +86,8 @@ These hardening checks are intentionally tracked as follow-up reliability work r
 
 ```powershell
 powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
+```
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
 ```

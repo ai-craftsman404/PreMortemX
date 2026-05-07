@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 - 2026-05-07
+
+- added a parallel Python runtime path for cross-platform execution without changing the existing v3 PowerShell behavior
+- added Python implementations for core run creation, run-record validation, and orchestrator deliberation
+- added Python implementations for registry updates, registry summaries/views, quality reviews, trend summaries, guardrail recommendations, and advisory-boundary reporting
+- added Python wrappers around the calibration store flow for initialization, import, summary, promotion-state changes, and approval-controlled calibration changes
+- added end-to-end Python runtime validation covering run creation, deliberation, registry, reviews, and calibration flow
+- kept the existing PowerShell runtime fully intact so v3 users are not disrupted during migration
+
 ## 0.3.0 - 2026-05-06
 
 - added `v3a` multi-agent deliberation core with orchestrator adjudication and deliberation artifacts

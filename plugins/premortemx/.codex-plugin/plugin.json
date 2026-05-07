@@ -1,7 +1,7 @@
 {
   "name": "premortemx",
-  "version": "0.3.0",
-  "description": "Evidence-backed pre-mortem analysis for Codex, now with multi-agent adjudication, calibration workflows, structured approvals, and adaptive guardrails.",
+  "version": "0.4.0",
+  "description": "Evidence-backed pre-mortem analysis for Codex with multi-agent adjudication, calibration workflows, adaptive guardrails, and a new cross-platform Python runtime path.",
   "author": {
     "name": "Code Plugin Guru"
   },
@@ -16,8 +16,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "PreMortemX",
-    "shortDescription": "Pre-mortem risk analysis with multi-agent adjudication and calibration.",
-    "longDescription": "PreMortemX helps Codex users stress-test releases before execution and validate architectures before implementation by combining pre-mortem reasoning, specialist AI lenses, orchestrated adjudication, readable decision artifacts, calibration workflows, and a lightweight harness for auditability and improvement.",
+    "shortDescription": "Pre-mortem risk analysis with multi-agent adjudication, calibration, and Python runtime support.",
+    "longDescription": "PreMortemX helps Codex users stress-test releases before execution and validate architectures before implementation by combining pre-mortem reasoning, specialist AI lenses, orchestrated adjudication, readable decision artifacts, calibration workflows, adaptive guardrails, and a lightweight harness for auditability and improvement. v4 adds a parallel Python runtime path for cross-platform execution.",
     "developerName": "Code Plugin Guru",
     "category": "Developer Tools",
     "capabilities": [

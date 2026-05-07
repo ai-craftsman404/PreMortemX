@@ -2,9 +2,9 @@
 
 # PreMortemX
 
-### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication and governed calibration.
+### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication, governed calibration, and a new Python runtime path.
 
-[![Version](https://img.shields.io/badge/version-0.3.0-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
+[![Version](https://img.shields.io/badge/version-0.4.0-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
 [![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-8C3B2F?style=flat-square)](.codex-plugin/plugin.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
@@ -86,11 +86,14 @@ That makes the system more than a prompt pattern. It is an AI translation of a r
 
 Codex should discover the plugin from the local marketplace metadata in this repo.
 
-### Runtime Requirement
+### Runtime Options
 
-- current implementation uses PowerShell scripts for artifact generation, registry updates, and validation
-- Windows is the primary validated environment today
-- Linux and macOS may work if PowerShell (`pwsh`) is installed, but that path is not yet fully validated end to end
+- current implementation supports both:
+  - the original PowerShell runtime
+  - a new parallel Python runtime path
+- Windows is fully validated for both runtime paths
+- Linux and macOS are now better aligned for local runtime use through Python
+- PowerShell (`pwsh`) is still supported, but it is no longer the only practical runtime path
 
 ### 2. Install or enable `PreMortemX`
 
@@ -122,6 +125,10 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 ```powershell
 powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
+```
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py
 ```
 
 ---
@@ -173,6 +180,12 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - calibration change requests and approvals
 - local-only authority with optional cloud-advisory edges
 - fully usable in local-first mode with no required external API dependency
+
+### V4 highlights
+
+- parallel Python runtime for cross-platform execution
+- Python implementations for core run creation, validation, deliberation, registry, review, and calibration flows
+- existing PowerShell runtime preserved for backward compatibility
 
 ### Roadmap
 

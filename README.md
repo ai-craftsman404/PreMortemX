@@ -2,9 +2,9 @@
 
 # PreMortemX
 
-### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication and governed calibration.
+### Evidence-backed pre-mortem risk analysis for Codex, with orchestrated adjudication, governed calibration, and a new Python runtime path.
 
-[![Version](https://img.shields.io/badge/version-0.3.0-8C3B2F?style=flat-square)](plugins/premortemx/.codex-plugin/plugin.json)
+[![Version](https://img.shields.io/badge/version-0.4.0-8C3B2F?style=flat-square)](plugins/premortemx/.codex-plugin/plugin.json)
 [![CI](https://img.shields.io/github/actions/workflow/status/ai-craftsman404/PreMortemX/ci.yml?style=flat-square&label=CI)](https://github.com/ai-craftsman404/PreMortemX/actions/workflows/ci.yml)
 [![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-8C3B2F?style=flat-square)](plugins/premortemx/.codex-plugin/plugin.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
@@ -81,9 +81,9 @@ $premortemx Validate this architecture and identify the top design risks before 
 - Codex discovery depends on `.agents/plugins/marketplace.json` being present at the repo root
 - after opening the repo, check the Codex Plugins UI for `PreMortemX`
 - if the plugin does not appear, reopen the repo root and confirm `.agents/plugins/marketplace.json` is still present
-- current implementation depends on PowerShell scripts
-- Windows is the primary validated environment today
-- Linux and macOS may work with PowerShell (`pwsh`) installed, but are not yet fully validated end to end
+- current implementation supports both the original PowerShell runtime and a new Python runtime path
+- Windows is fully validated for both runtime paths
+- Linux and macOS are better aligned for local runtime use through Python
 
 ---
 
