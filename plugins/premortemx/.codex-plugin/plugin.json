@@ -26,6 +26,7 @@
       "Local execution"
     ],
     "defaultPrompt": [
+      "Smoke test this plugin and confirm it is active.",
       "Use PreMortemX to run an evidence-backed pre-mortem on this release plan and return a clear Pass, Warn, or Block decision.",
       "Use PreMortemX to validate this architecture and identify credible design risks before implementation.",
       "Assess this design-to-release bundle for credible release blockers and explain the result in plain language.",

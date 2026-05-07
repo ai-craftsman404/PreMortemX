@@ -63,11 +63,24 @@ It is fully usable in local-first mode with no required external API dependency.
 1. Clone or download this repo.
 2. Open the repo in Codex.
 3. Install or enable `PreMortemX` from the Codex Plugins UI.
-4. Use a prompt such as:
+4. Run this smoke test first:
+
+```text
+$premortemx Smoke test this plugin and confirm it is active.
+```
+
+5. Then use a real prompt such as:
 
 ```text
 $premortemx Validate this architecture and identify the top design risks before implementation.
 ```
+
+### Install Notes
+
+- open the repo root, not only the nested plugin folder
+- Codex discovery depends on `.agents/plugins/marketplace.json` being present at the repo root
+- after opening the repo, check the Codex Plugins UI for `PreMortemX`
+- if the plugin does not appear, reopen the repo root and confirm `.agents/plugins/marketplace.json` is still present
 
 ---
 

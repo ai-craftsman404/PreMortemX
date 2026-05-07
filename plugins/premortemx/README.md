@@ -83,7 +83,13 @@ Codex should discover the plugin from the local marketplace metadata in this rep
 
 Use the Codex Plugins UI to install and enable the plugin.
 
-### 3. Run a prompt
+### 3. Run the smoke test first
+
+```text
+$premortemx Smoke test this plugin and confirm it is active.
+```
+
+### 4. Run a real assessment prompt
 
 ```text
 $premortemx Run a pre-mortem on this release plan and tell me whether we should ship.
@@ -93,7 +99,13 @@ $premortemx Run a pre-mortem on this release plan and tell me whether we should 
 $premortemx Validate this architecture and identify the top design risks before implementation.
 ```
 
-### 4. Run the local test suite
+### 5. If discovery fails
+
+- open the repo root, not only the nested plugin folder
+- confirm local marketplace metadata is present at `.agents/plugins/marketplace.json`
+- reopen the repo root in Codex and check the Plugins UI again
+
+### 6. Run the local test suite
 
 ```powershell
 powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScriptTests.ps1
