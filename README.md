@@ -90,6 +90,11 @@ Review a committed sanitized example bundle here:
 
 <img src="assets/premortemx-artifact-preview.png" alt="PreMortemX example artifacts showing executive summary, orchestrator adjudication, and risk register snapshot." width="960">
 
+<p>
+  <img src="assets/premortemx-summary-preview.png" alt="PreMortemX executive summary preview." width="470">
+  <img src="assets/premortemx-risk-register-preview.png" alt="PreMortemX risk register preview." width="470">
+</p>
+
 - [Executive summary](plugins/premortemx/examples/sample-warn-release/summary-exec.md)
 - [Standard summary](plugins/premortemx/examples/sample-warn-release/summary-standard.md)
 - [Risk register](plugins/premortemx/examples/sample-warn-release/risk-register.md)
