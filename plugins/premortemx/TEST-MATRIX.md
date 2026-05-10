@@ -74,6 +74,7 @@ These hardening checks are intentionally tracked as follow-up reliability work r
 - [x] wrong-trigger case defined
 - [x] override accountability case defined
 - [x] sensitive-artifact case defined
+- [x] dedicated adversarial evaluator suite added for runtime/workflow boundary cases
 
 ## Privacy and approvals
 
@@ -86,6 +87,26 @@ These hardening checks are intentionally tracked as follow-up reliability work r
 - [x] local-only authority and cloud-only advisory boundary are validated
 
 ## Local validation commands
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXV5ATests.py
+```
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXV5BTests.py
+```
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXV5CTests.py
+```
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXOperatorSurfaceTests.py
+```
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXAdversarialEvaluatorTests.py
+```
 
 ```powershell
 python .\plugins\premortemx\scripts\tests\Run-PreMortemXPythonRuntimeTests.py

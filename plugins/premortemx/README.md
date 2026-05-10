@@ -91,8 +91,9 @@ Codex should discover the plugin from the local marketplace metadata in this rep
 - `v4` is Python-first
 - the Python runtime is the default execution path for normal plugin use
 - the legacy PowerShell runtime is preserved as fallback compatibility
-- Windows is fully validated for both runtimes
-- Linux and macOS are intended to use the Python runtime path
+- Windows is validated
+- Linux is validated through the Python runtime path
+- macOS is reasonably expected to work through Python, but is not yet validated end to end
 - `pwsh` support remains available, but it is not the primary `v4` path
 
 ### 2. Install or enable `PreMortemX`
@@ -133,16 +134,24 @@ powershell -NoProfile -File .\plugins\premortemx\scripts\tests\Run-PreMortemXScr
 
 ## Example Artifacts
 
-Review a committed sanitized example bundle here:
+Review a committed sanitized `v5` governed example bundle here:
 
 - [examples/sample-warn-release/README.md](examples/sample-warn-release/README.md)
+- [examples/sample-warn-release/start-here.md](examples/sample-warn-release/start-here.md)
 - [examples/sample-warn-release/summary-exec.md](examples/sample-warn-release/summary-exec.md)
 - [examples/sample-warn-release/summary-standard.md](examples/sample-warn-release/summary-standard.md)
 - [examples/sample-warn-release/risk-register.md](examples/sample-warn-release/risk-register.md)
 - [examples/sample-warn-release/evidence-index.md](examples/sample-warn-release/evidence-index.md)
 - [examples/sample-warn-release/deliberation.json](examples/sample-warn-release/deliberation.json)
+- [examples/sample-warn-release/approvals.json](examples/sample-warn-release/approvals.json)
 
-This bundle shows the artifact shape for a realistic `Warn` outcome without requiring you to install the plugin first.
+This bundle shows the current `v5` operator surface for a realistic `Warn` outcome:
+
+- `start-here` reading order
+- governed gate status
+- approval and resume cues
+- risk register depth
+- adjudication artifact shape
 
 ---
 
@@ -185,11 +194,31 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - Python implementations for core run creation, validation, deliberation, registry, review, and calibration flows
 - existing PowerShell runtime preserved as fallback compatibility
 
+### V5 highlights
+
+- governed prompt, workflow, and runtime asset layers
+- operator-facing `start-here` run landing file
+- explicit gate status, approval posture, and resume cues
+- workflow gating for assess-entry and handoff completeness
+- boundary/context enforcement for blocked, quarantined, and transformed context
+- dedicated adversarial evaluator coverage for runtime/workflow edge cases
+
 ### Roadmap
 
 - `v1`: release-first pre-mortem gating with structured artifacts and overrides
 - `v2`: architecture validation, stronger registry views, quality follow-up, and trend summaries
 - `v3`: multi-agent adjudication, governed calibration, reviewed-run promotion, and approval-controlled change flows
+- `v4`: Python-first cross-platform runtime with PowerShell fallback compatibility
+- `v5`: governed execution-environment assets for prompts, workflow, policy/config, context flow, and reusable templates
+
+### Version evolution
+
+| Version | Main focus | What changed |
+|------|------|------|
+| `v1` | Release-first pre-mortem gating | Added `Pass` / `Warn` / `Block`, structured artifacts, local registry, and override handling |
+| `v2` | Broader assessment coverage | Added `architecture-validation`, stronger registry views, guardrail recommendations, quality review logging, and trend summaries |
+| `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
+| `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
 
 ### Decision model
 
@@ -247,12 +276,21 @@ Current local validation covers:
 - run initialization
 - schema validation
 - orchestrator deliberation
+- governed workflow gating
+- governed boundary/context enforcement
 - registry updates and dashboards
 - quality review logging
 - calibration store initialization
 - reviewed-run import and promotion flow
 - calibration change requests and approvals
 - advisory-boundary reporting
+- adversarial evaluator edge cases
+
+Adversarial evaluator entrypoint:
+
+```powershell
+python .\plugins\premortemx\scripts\tests\Run-PreMortemXAdversarialEvaluatorTests.py
+```
 
 Primary test entrypoint:
 

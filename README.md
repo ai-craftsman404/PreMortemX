@@ -37,6 +37,16 @@ It is fully usable in local-first mode with no required external API dependency.
 - keeps decisions readable, evidence-backed, and auditable
 - supports calibration over time through reviewed runs and controlled promotion
 
+### What `v5` adds
+
+- governed prompt, workflow, and runtime asset layers
+- active workflow gating for assess-entry and handoff completeness
+- active boundary/context enforcement for blocked, quarantined, and transformed context
+- operator-facing `start-here` run landing with gate, approval, and resume cues
+- blocker-aware next-action guidance aligned across summaries and approvals
+- stronger synthetic and adversarial assurance coverage for mixed blockers, malformed context markers, remediation transitions, and cross-artifact consistency
+- bounded sub-agent assurance reviews used to identify high-risk permutation gaps before hardening the runtime and tests
+
 ### Trust Boundary
 
 - works in local-first mode with no required external API dependency
@@ -92,28 +102,28 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 ## Real Example Bundle
 
-Review a committed sanitized example bundle here:
+Review a committed sanitized `v5` governed example bundle here:
 
 <img src="assets/premortemx-artifact-preview.png" alt="PreMortemX example artifacts showing executive summary, orchestrator adjudication, and risk register snapshot." width="960">
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="assets/premortemx-summary-preview.png" alt="PreMortemX executive summary preview." width="100%">
-    </td>
-    <td width="50%">
-      <img src="assets/premortemx-risk-register-preview.png" alt="PreMortemX risk register preview." width="100%">
-    </td>
-  </tr>
-</table>
+<img src="assets/premortemx-focused-previews.png" alt="PreMortemX focused previews showing the executive summary and governed risk register in a balanced side-by-side layout." width="960">
 
 - [Executive summary](plugins/premortemx/examples/sample-warn-release/summary-exec.md)
 - [Standard summary](plugins/premortemx/examples/sample-warn-release/summary-standard.md)
+- [Start here](plugins/premortemx/examples/sample-warn-release/start-here.md)
+- [Approvals](plugins/premortemx/examples/sample-warn-release/approvals.json)
 - [Risk register](plugins/premortemx/examples/sample-warn-release/risk-register.md)
 - [Evidence index](plugins/premortemx/examples/sample-warn-release/evidence-index.md)
 - [Deliberation artifact](plugins/premortemx/examples/sample-warn-release/deliberation.json)
 
-This is a realistic `Warn` example, included so visitors can inspect the actual artifact structure before installing the plugin.
+This is a realistic `Warn` example, included so visitors can inspect the current `v5` governed run surface before installing the plugin:
+
+- `start-here` landing flow
+- gate and approval cues
+- continue / resume guidance
+- risk register depth
+- adjudication artifact shape
+- governed workflow and boundary state
 
 ---
 
@@ -156,6 +166,7 @@ flowchart LR
 | `v2` | Broader assessment coverage | Added `architecture-validation`, stronger registry views, guardrail recommendations, quality review logging, and trend summaries |
 | `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
 | `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
+| `v5` | Governed execution environment | Added prompt/workflow/runtime asset layers, gate-state enforcement, boundary/context controls, stronger operator-facing run artifacts, and higher-assurance synthetic/adversarial validation |
 
 ---
 

@@ -1,0 +1,51 @@
+{
+    "approvalsRequested": [],
+    "approvalsGranted": [],
+    "recommendation": "stay-conservative",
+    "approvalStatus": "pending-confirmation",
+    "currentAction": "confirm-before-monitor",
+    "resumeGuidance": "Resume from `Monitor` when the next action items are complete.",
+    "proceedAllowed": false,
+    "proceedBlockers": [
+        "The current decision posture requires explicit confirmation before proceeding."
+    ],
+    "boundaryStatus": "clean",
+    "blockedContextClasses": [],
+    "carryForwardAllowed": true,
+    "transformationStatus": "transformed",
+    "carryForwardLedger": [],
+    "playbookGateStatus": "confirmation-required",
+    "allowedNextStage": null,
+    "playbook": {
+        "name": "High-Sensitivity Release Decision Approval Playbook",
+        "path": "plugins/premortemx/workflow/approvals/approval-playbook-high-sensitivity-release-decision.md"
+    },
+    "workflowState": {
+        "lifecycle": "Core Release Risk Lifecycle Map",
+        "currentStage": "Approve/Block",
+        "completedStages": [
+            "Intake",
+            "Assess",
+            "Deliberate"
+        ],
+        "nextStage": "Monitor",
+        "pendingApprovalPlaybook": "High-Sensitivity Release Decision Approval Playbook",
+        "activeExceptionRule": null,
+        "assessEntryStatus": "ready",
+        "assessEntryBlockers": [],
+        "deliberateHandoffStatus": "ready",
+        "handoffBlockers": [],
+        "gateStatus": "confirmation-required",
+        "allowedNextStage": null,
+        "blockedBy": [
+            "The current decision posture requires explicit confirmation before proceeding."
+        ]
+    },
+    "runtimeBoundary": {
+        "name": "Release Risk Boundary And Enforcement Panel",
+        "path": "plugins/premortemx/runtime/policies/boundary-enforcement-panel-release-risk-synthetic.md"
+    },
+    "notes": [
+        "Permission escalation events belong here."
+    ]
+}
