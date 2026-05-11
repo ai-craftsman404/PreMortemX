@@ -70,6 +70,24 @@ It is fully usable in local-first mode with no required external API dependency.
 
 ## Quick Start
 
+### 30-Second Path
+
+1. Open the repo root in Codex.
+2. Enable `PreMortemX` in the Plugins UI.
+3. Paste this:
+
+```text
+$premortemx Validate this architecture and identify the top design risks before implementation.
+```
+
+4. Expect:
+
+- a bounded architecture-artifact check instead of guessing
+- an adjudicated `Pass` / `Warn` / `Block` style outcome
+- governed artifact generation for deeper review
+
+### Full Quick Start
+
 1. Clone or download this repo.
 2. Open the repo in Codex.
 3. Install or enable `PreMortemX` from the Codex Plugins UI.
@@ -85,7 +103,8 @@ $premortemx Smoke test this plugin and confirm it is active.
 $premortemx Validate this architecture and identify the top design risks before implementation.
 ```
 
-### Install Notes
+<details>
+<summary>Install notes and platform details</summary>
 
 - open the repo root, not only the nested plugin folder
 - Codex discovery depends on `.agents/plugins/marketplace.json` being present at the repo root
@@ -97,6 +116,8 @@ $premortemx Validate this architecture and identify the top design risks before 
 - Windows is validated
 - Linux is validated through the Python runtime path
 - macOS is reasonably expected to work through Python, but is not yet validated end to end
+
+</details>
 
 ---
 
