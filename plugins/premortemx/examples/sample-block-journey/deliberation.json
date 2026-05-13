@@ -1,0 +1,121 @@
+{
+    "version": "3.0",
+    "adjudicatedBy": "orchestrator",
+    "status": "completed",
+    "sharedRoles": [
+        "Evidence Auditor",
+        "Decision Policy Reviewer",
+        "Orchestrator"
+    ],
+    "specialistRoles": [
+        "Domain Risk Specialist",
+        "Operational/Release Risk Specialist",
+        "Security/Privacy Risk Specialist"
+    ],
+    "specialists": [
+        {
+            "role": "Domain Risk Specialist",
+            "recommendation": "Warn",
+            "summary": "Operational rollout sequencing remains brittle under rollback pressure.",
+            "evidenceRefs": [
+                "ops/rollout.md#rollback"
+            ],
+            "rubric": {
+                "confidence": 2,
+                "evidenceStrength": 4,
+                "riskSeverity": 4,
+                "evidenceCompleteness": 2,
+                "disagreementLevel": 4,
+                "policyFit": 3,
+                "decisionSensitivity": 4
+            }
+        },
+        {
+            "role": "Operational/Release Risk Specialist",
+            "recommendation": "Block",
+            "summary": "Release controls are incomplete for rollback and monitoring ownership.",
+            "evidenceRefs": [
+                "release/checklist.md#controls"
+            ],
+            "rubric": {
+                "confidence": 3,
+                "evidenceStrength": 5,
+                "riskSeverity": 5,
+                "evidenceCompleteness": 2,
+                "disagreementLevel": 4,
+                "policyFit": 2,
+                "decisionSensitivity": 5
+            }
+        },
+        {
+            "role": "Security/Privacy Risk Specialist",
+            "recommendation": "Warn",
+            "summary": "Security posture is acceptable but not strong enough to offset weak rollout controls.",
+            "evidenceRefs": [
+                "security/review.md#summary"
+            ],
+            "rubric": {
+                "confidence": 3,
+                "evidenceStrength": 4,
+                "riskSeverity": 3,
+                "evidenceCompleteness": 3,
+                "disagreementLevel": 4,
+                "policyFit": 3,
+                "decisionSensitivity": 4
+            }
+        }
+    ],
+    "agreement": {
+        "consensusDecision": "Warn",
+        "disagreementLevel": 3,
+        "summary": "Consensus began at Warn with disagreement level 3."
+    },
+    "rubric": {
+        "gradingScale": "1-5",
+        "confidence": 3,
+        "evidenceStrength": 4,
+        "riskSeverity": 5,
+        "evidenceCompleteness": 2,
+        "disagreementLevel": 3,
+        "policyFit": 2,
+        "decisionSensitivity": 5,
+        "sourceProvenance": 3,
+        "mitigationReadiness": 3,
+        "calibratedPatternFit": 3,
+        "contradictoryArtifactPressure": 1
+    },
+    "overrideModel": {
+        "defaultTrigger": "evidence-gated",
+        "backstopTrigger": "severity-and-policy",
+        "overrideApplied": true,
+        "overrideReason": "Severity-and-policy override: a credible high-severity risk met the escalation threshold.",
+        "humanEscalationRequired": true,
+        "humanEscalationReasons": [
+            "High-sensitivity case retains unresolved uncertainty."
+        ],
+        "overrideTestSummary": "Severity-and-policy override: a credible high-severity risk met the escalation threshold."
+    },
+    "adjudication": {
+        "finalDecision": "Block",
+        "finalConfidenceBand": "Medium",
+        "summary": "Severity-and-policy override: a credible high-severity risk met the escalation threshold.",
+        "supportingEvidence": [
+            "release/checklist.md#controls",
+            "ops/rollout.md#rollback",
+            "security/review.md#summary"
+        ],
+        "decisionOwner": null,
+        "ruleTriggered": "severity-and-policy",
+        "humanEscalationConsidered": true,
+        "residualRiskAfterMitigation": "Medium",
+        "decisionPath": [
+            "Consensus began at Warn with disagreement level 3.",
+            "Overall confidence resolved to 3 on the internal 1-5 scale.",
+            "Minimum evidence completeness resolved to 2 and minimum policy fit resolved to 2.",
+            "Override path: Severity-and-policy override: a credible high-severity risk met the escalation threshold."
+        ],
+        "uncertaintyDrivers": [
+            "evidence completeness remained low"
+        ]
+    }
+}

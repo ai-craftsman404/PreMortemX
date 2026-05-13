@@ -153,6 +153,23 @@ This bundle shows the current `v5` operator surface for a realistic `Warn` outco
 - risk register depth
 - adjudication artifact shape
 
+### `v6a` journey example
+
+Review a committed sanitized `Block` journey-view bundle here:
+
+- [examples/sample-block-journey/README.md](examples/sample-block-journey/README.md)
+- [examples/sample-block-journey/journey-view.html](examples/sample-block-journey/journey-view.html)
+- [examples/sample-block-journey/journey-view.json](examples/sample-block-journey/journey-view.json)
+- [examples/sample-block-journey/start-here.md](examples/sample-block-journey/start-here.md)
+- [examples/sample-block-journey/approvals.json](examples/sample-block-journey/approvals.json)
+
+This bundle shows the first `v6a` visual risk-journey surface:
+
+- governed lifecycle rail
+- branch and blocker flow
+- gate-card decision control
+- resume and re-entry path visibility
+
 ---
 
 ## How It Works
@@ -203,6 +220,12 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - boundary/context enforcement for blocked, quarantined, and transformed context
 - dedicated adversarial evaluator coverage for runtime/workflow edge cases
 
+### Early V6A highlights
+
+- a first visual `journey-view` surface derived from governed run artifacts
+- lifecycle rail, branch journey, gate card, and resume path in one local artifact
+- a stronger visible expression of the agent-team and harness model above the underlying report set
+
 ### Roadmap
 
 - `v1`: release-first pre-mortem gating with structured artifacts and overrides
@@ -210,6 +233,7 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - `v3`: multi-agent adjudication, governed calibration, reviewed-run promotion, and approval-controlled change flows
 - `v4`: Python-first cross-platform runtime with PowerShell fallback compatibility
 - `v5`: governed execution-environment assets for prompts, workflow, policy/config, context flow, and reusable templates
+- `v6a`: first visual risk-journey surface derived from governed run artifacts
 
 ### Version evolution
 
@@ -219,6 +243,8 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 | `v2` | Broader assessment coverage | Added `architecture-validation`, stronger registry views, guardrail recommendations, quality review logging, and trend summaries |
 | `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
 | `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
+| `v5` | Governed execution environment | Added prompt/workflow/runtime asset layers, gate-state enforcement, boundary/context controls, stronger operator-facing run artifacts, and higher-assurance synthetic/adversarial validation |
+| `v6a` | Visual risk journey | Added the first derived `journey-view` surface with lifecycle rail, branch flow, gate control, and resume-path visualization |
 
 ### Decision model
 

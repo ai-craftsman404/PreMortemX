@@ -47,6 +47,12 @@ It is fully usable in local-first mode with no required external API dependency.
 - stronger synthetic and adversarial assurance coverage for mixed blockers, malformed context markers, remediation transitions, and cross-artifact consistency
 - bounded sub-agent assurance reviews used to identify high-risk permutation gaps before hardening the runtime and tests
 
+### What early `v6a` adds
+
+- a first visual risk-journey surface derived from canonical governed run artifacts
+- a lifecycle rail, branch journey, gate card, and resume path in one local artifact
+- a stronger visible expression of the agent-team and harness model, not just the underlying reports
+
 ### Trust Boundary
 
 - works in local-first mode with no required external API dependency
@@ -146,6 +152,25 @@ This is a realistic `Warn` example, included so visitors can inspect the current
 - adjudication artifact shape
 - governed workflow and boundary state
 
+### `v6a` Journey Surface Preview
+
+This is the first visual journey-view artifact generated from a governed `Block` run:
+
+<img src="assets/premortemx-v6a-journey-showcase.png" alt="PreMortemX v6a journey view showing the governed lifecycle rail, risk branches, blockers, and gate control panel." width="960">
+
+- [Journey example README](plugins/premortemx/examples/sample-block-journey/README.md)
+- [Journey view HTML](plugins/premortemx/examples/sample-block-journey/journey-view.html)
+- [Journey view JSON](plugins/premortemx/examples/sample-block-journey/journey-view.json)
+- [Journey start-here](plugins/premortemx/examples/sample-block-journey/start-here.md)
+- [Journey approvals](plugins/premortemx/examples/sample-block-journey/approvals.json)
+
+This preview is important because it shows `PreMortemX` as more than a report generator:
+
+- the agent-team and harness path is visible
+- blocker precedence is visible
+- resume and re-entry behavior is visible
+- the visual layer is still derived from auditable governed artifacts
+
 ---
 
 ## Example Output
@@ -188,6 +213,7 @@ flowchart LR
 | `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
 | `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
 | `v5` | Governed execution environment | Added prompt/workflow/runtime asset layers, gate-state enforcement, boundary/context controls, stronger operator-facing run artifacts, and higher-assurance synthetic/adversarial validation |
+| `v6a` | Visual risk journey | Added the first derived `journey-view` surface with lifecycle rail, branch flow, gate control, and resume-path visualization |
 
 ---
 

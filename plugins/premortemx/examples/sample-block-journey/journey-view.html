@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>PreMortemX Release Assessment Journey View</title>
+<style>
+:root{--bg:#091018;--panel:#101926;--panel-2:#0d1622;--line:#284158;--text:#eef4fb;--muted:#8ea8c3;--win:#72ddb0;--warn:#f2ba59;--block:#eb7e8e;--accent:#8bc4ff}
+body{background:radial-gradient(circle at top left,#152538 0%,#0b1017 45%,#080c12 100%);color:var(--text);font-family:Segoe UI,Arial,sans-serif;margin:0;padding:28px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto}
+.hero{background:linear-gradient(135deg,rgba(25,38,56,.95),rgba(13,20,31,.92));border:1px solid rgba(110,155,201,.24);border-radius:22px;padding:26px 26px 22px;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:20px;align-items:start}
+.eyebrow{color:#91aecb;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;margin:0 0 10px 0}
+h1,h2,h3{margin:0 0 12px 0}
+h1{font-size:38px;line-height:1.05;letter-spacing:-1px}
+.hero-sub{font-size:16px;color:#d8e6f3;max-width:760px;margin:0 0 18px 0}
+.recommendation-badge{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:10px 16px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.1px}
+.recommendation-badge.block{background:rgba(235,126,142,.14);border:1px solid rgba(235,126,142,.45);color:#ffdbe1}
+.recommendation-badge.warn{background:rgba(242,186,89,.14);border:1px solid rgba(242,186,89,.45);color:#ffe8bc}
+.recommendation-badge.pass{background:rgba(114,221,176,.14);border:1px solid rgba(114,221,176,.45);color:#d8ffef}
+.story{margin:18px 0 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.story li{background:rgba(255,255,255,.03);border:1px solid rgba(124,160,197,.16);border-radius:14px;padding:12px 14px;color:#dfeaf6}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:rgba(7,12,18,.36);border:1px solid rgba(124,160,197,.18);border-radius:16px;padding:14px}
+.stat-label{display:block;color:var(--muted);font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.stat-value{font-size:22px;font-weight:700;letter-spacing:-.4px}
+.top{display:grid;grid-template-columns:2fr 1fr;gap:20px;align-items:start;margin-top:22px}
+.card{background:linear-gradient(180deg,rgba(16,25,38,.95),rgba(12,18,27,.96));border:1px solid rgba(97,129,163,.22);border-radius:18px;padding:18px;box-shadow:0 18px 44px rgba(0,0,0,.22)}
+.section-kicker{color:var(--muted);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin:0 0 8px 0}
+code{color:#d8f0ff}
+a{color:#9ac7ff}
+.warnings{margin-top:14px}
+.warnings summary{cursor:pointer;font-weight:600}
+.node-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.node-panel{background:linear-gradient(180deg,rgba(9,16,24,.8),rgba(10,17,26,.96));border:1px solid rgba(97,129,163,.2);border-radius:16px;padding:16px}
+.node-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.node-top h3{font-size:16px;line-height:1.15;max-width:65%}
+.mini-badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.mini-badge{background:rgba(139,196,255,.12);border:1px solid rgba(139,196,255,.28);border-radius:999px;padding:4px 8px;font-size:11px;color:#d7ebff}
+.node-summary{color:#dbe8f4;margin:0 0 12px 0}
+.node-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+.node-meta span{display:flex;flex-direction:column;gap:4px;color:#c8d8e9;font-size:13px}
+.node-meta strong{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#87a4c1}
+.gate-stack{display:grid;gap:14px}
+.gate-panel{background:rgba(7,12,18,.35);border:1px solid rgba(124,160,197,.18);border-radius:14px;padding:14px}
+.gate-panel h3{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#96b4d0;margin:0 0 10px 0}
+.gate-row{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-top:1px solid rgba(124,160,197,.12)}
+.gate-row:first-child{border-top:none;padding-top:0}
+.gate-row .label{color:#97afc8}
+.gate-row .value{font-weight:600;text-align:right}
+.link-list{padding-left:18px}
+@media (max-width: 980px){.hero-grid,.top,.node-grid,.stat-grid{grid-template-columns:1fr}.node-top h3{max-width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div class="hero-grid">
+<div>
+<p class="eyebrow">PreMortemX Governed Journey</p>
+<h1>PreMortemX Release Assessment Journey View</h1>
+<p class="hero-sub">This visual surface is derived from the governed run artifacts and turns the agent-team and harness path into a clearer story: what dominated the decision, what blocked progression, and what must happen next.</p>
+<span class="recommendation-badge block">Recommendation Block</span>
+<ul class="story">
+<li>`Block` remains the adjudicated recommendation because the governed harness found the active path too risky to proceed without additional control.</li>
+<li>The dominant blocker is: An active exception rule must be resolved before proceeding..</li>
+<li>Next action: escalate-before-revisit.</li>
+</ul>
+</div>
+<div class="stat-grid">
+<div class="stat"><span class="stat-label">Current stage</span><span class="stat-value">Approve/Block</span></div>
+<div class="stat"><span class="stat-label">Confidence</span><span class="stat-value">Medium</span></div>
+<div class="stat"><span class="stat-label">Approval posture</span><span class="stat-value">awaiting-human-escalation</span></div>
+<div class="stat"><span class="stat-label">Next stage</span><span class="stat-value">Revisit</span></div>
+</div>
+</div>
+
+</section>
+<div class="top">
+<section class="card">
+<p class="section-kicker">Lifecycle and branch story</p>
+<h2>Lifecycle And Branch Journey</h2>
+<svg viewBox="0 0 1080 710" role="img" aria-label="PreMortemX risk journey view" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pmx-journey-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#101723"/><stop offset="100%" stop-color="#0b0f14"/></linearGradient><filter id="pmx-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.25"/></filter><marker id="pmx-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b7fa4"/></marker><marker id="pmx-arrow-win" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#70d9aa"/></marker></defs><rect x="0" y="0" width="1080" height="710" rx="18" fill="url(#pmx-journey-bg)"/><text x="34" y="28" fill="#8ea8c3" font-size="12" font-family="Segoe UI, Arial, sans-serif" letter-spacing="1.4">GOVERNED JOURNEY</text><line x1="60" y1="74" x2="980" y2="74" stroke="#324a65" stroke-width="4" /><rect x="30" y="30" width="120" height="52" rx="12" fill="#163b34" stroke="#70d9aa" stroke-width="2" filter="url(#pmx-shadow)"/><text x="42" y="51" fill="#f4f7fb" font-size="12" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Intake</text><text x="42" y="69" fill="#b4c7dc" font-size="10" font-family="Segoe UI, Arial, sans-serif">completed</text><rect x="180" y="30" width="120" height="52" rx="12" fill="#163b34" stroke="#70d9aa" stroke-width="2" filter="url(#pmx-shadow)"/><text x="192" y="51" fill="#f4f7fb" font-size="12" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Assess</text><text x="192" y="69" fill="#b4c7dc" font-size="10" font-family="Segoe UI, Arial, sans-serif">completed</text><rect x="330" y="30" width="120" height="52" rx="12" fill="#163b34" stroke="#70d9aa" stroke-width="2" filter="url(#pmx-shadow)"/><text x="342" y="51" fill="#f4f7fb" font-size="12" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Deliberate</text><text x="342" y="69" fill="#b4c7dc" font-size="10" font-family="Segoe UI, Arial, sans-serif">completed</text><rect x="480" y="30" width="120" height="52" rx="12" fill="#5f4214" stroke="#f2ba59" stroke-width="2" filter="url(#pmx-shadow)"/><text x="492" y="51" fill="#f4f7fb" font-size="12" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Approve/Block</text><text x="492" y="69" fill="#b4c7dc" font-size="10" font-family="Segoe UI, Arial, sans-serif">current</text><rect x="630" y="30" width="120" height="52" rx="12" fill="#152232" stroke="#f2ba59" stroke-width="2" filter="url(#pmx-shadow)"/><text x="642" y="51" fill="#f4f7fb" font-size="12" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Monitor</text><text x="642" y="69" fill="#b4c7dc" font-size="10" font-family="Segoe UI, Arial, sans-serif">next</text><rect x="780" y="30" width="120" height="52" rx="12" fill="#152232" stroke="#46637f" stroke-width="2" filter="url(#pmx-shadow)"/><text x="792" y="51" fill="#f4f7fb" font-size="12" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Revisit</text><text x="792" y="69" fill="#b4c7dc" font-size="10" font-family="Segoe UI, Arial, sans-serif">pending</text><rect x="120" y="140" width="260" height="60" rx="12" fill="#2f1b21" stroke="#eb7e8e" stroke-width="2" filter="url(#pmx-shadow)"/><text x="130" y="157" fill="#f4f7fb" font-size="11.5" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Operational/Release Risk Speciali…</text><text x="130" y="173" fill="#8fb5d7" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">risk</text><text x="130" y="189" fill="#d4e2ef" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">Release controls are incomplete for rollback and monitoring o…</text><rect x="120" y="224" width="260" height="60" rx="12" fill="#2f1b21" stroke="#eb7e8e" stroke-width="2" filter="url(#pmx-shadow)"/><text x="130" y="241" fill="#f4f7fb" font-size="11.5" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Domain Risk Specialist</text><text x="130" y="257" fill="#8fb5d7" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">risk</text><text x="130" y="273" fill="#d4e2ef" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">Operational rollout sequencing remains brittle under rollback…</text><rect x="120" y="308" width="260" height="60" rx="12" fill="#2f1b21" stroke="#eb7e8e" stroke-width="2" filter="url(#pmx-shadow)"/><text x="130" y="325" fill="#f4f7fb" font-size="11.5" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Security/Privacy Risk Specialist</text><text x="130" y="341" fill="#8fb5d7" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">risk</text><text x="130" y="357" fill="#d4e2ef" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">Security posture is acceptable but not strong enough to offse…</text><rect x="420" y="392" width="250" height="60" rx="12" fill="#2f1b21" stroke="#eb7e8e" stroke-width="2" filter="url(#pmx-shadow)"/><text x="430" y="409" fill="#f4f7fb" font-size="11.5" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Blocker 1</text><text x="430" y="425" fill="#8fb5d7" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">revisit</text><text x="430" y="441" fill="#d4e2ef" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">An active exception rule must be resolved before proceeding.</text><rect x="420" y="476" width="250" height="60" rx="12" fill="#2f1b21" stroke="#eb7e8e" stroke-width="2" filter="url(#pmx-shadow)"/><text x="430" y="493" fill="#f4f7fb" font-size="11.5" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Blocker 2</text><text x="430" y="509" fill="#8fb5d7" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">approval</text><text x="430" y="525" fill="#d4e2ef" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">Human escalation is required before proceeding.</text><rect x="720" y="560" width="250" height="60" rx="12" fill="#123127" stroke="#66d8b2" stroke-width="2" filter="url(#pmx-shadow)"/><text x="730" y="577" fill="#f4f7fb" font-size="11.5" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Resume path</text><text x="730" y="593" fill="#8fb5d7" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">revisit</text><text x="730" y="609" fill="#d4e2ef" font-size="9.5" font-family="Segoe UI, Arial, sans-serif">Resume from `Revisit` after resolving the active exception ru…</text><path d="M 150 56.0 C 192 56.0, 138 56.0, 180 56.0" fill="none" stroke="#70d9aa" stroke-width="3" marker-end="url(#pmx-arrow-win)"/><path d="M 300 56.0 C 342 56.0, 288 56.0, 330 56.0" fill="none" stroke="#70d9aa" stroke-width="3" marker-end="url(#pmx-arrow-win)"/><path d="M 450 56.0 C 492 56.0, 438 56.0, 480 56.0" fill="none" stroke="#70d9aa" stroke-width="3" marker-end="url(#pmx-arrow-win)"/><path d="M 600 56.0 C 642 56.0, 588 56.0, 630 56.0" fill="none" stroke="#5b7fa4" stroke-width="2" marker-end="url(#pmx-arrow)"/><path d="M 750 56.0 C 792 56.0, 738 56.0, 780 56.0" fill="none" stroke="#5b7fa4" stroke-width="2" marker-end="url(#pmx-arrow)"/><path d="M 600 56.0 C 642 56.0, 78 170.0, 120 170.0" fill="none" stroke="#70d9aa" stroke-width="3" marker-end="url(#pmx-arrow-win)"/><path d="M 600 56.0 C 642 56.0, 78 254.0, 120 254.0" fill="none" stroke="#5b7fa4" stroke-width="2" marker-end="url(#pmx-arrow)"/><path d="M 600 56.0 C 642 56.0, 78 338.0, 120 338.0" fill="none" stroke="#5b7fa4" stroke-width="2" marker-end="url(#pmx-arrow)"/><path d="M 600 56.0 C 642 56.0, 378 422.0, 420 422.0" fill="none" stroke="#c56f7d" stroke-width="2" marker-end="url(#pmx-arrow)"/><path d="M 600 56.0 C 642 56.0, 378 506.0, 420 506.0" fill="none" stroke="#c56f7d" stroke-width="2" marker-end="url(#pmx-arrow)"/><path d="M 670 422.0 C 712 422.0, 678 590.0, 720 590.0" fill="none" stroke="#5b7fa4" stroke-width="2" marker-end="url(#pmx-arrow)" stroke-dasharray="8 6"/><path d="M 670 506.0 C 712 506.0, 678 590.0, 720 590.0" fill="none" stroke="#5b7fa4" stroke-width="2" marker-end="url(#pmx-arrow)" stroke-dasharray="8 6"/></svg>
+</section>
+<aside class="card">
+<p class="section-kicker">Governed gate and control</p>
+<h2>Gate Card</h2>
+<div class="gate-stack">
+<section class="gate-panel"><h3>Decision</h3>
+<div class="gate-row"><span class="label">Recommendation</span><span class="value"><code>Block</code></span></div>
+<div class="gate-row"><span class="label">Approval status</span><span class="value"><code>awaiting-human-escalation</code></span></div>
+<div class="gate-row"><span class="label">Gate status</span><span class="value"><code>awaiting-human-escalation</code></span></div>
+</section>
+<section class="gate-panel"><h3>Blocking State</h3>
+<div class="gate-row"><span class="label">Primary blocker</span><span class="value">An active exception rule must be resolved before proceeding.</span></div>
+<div class="gate-row"><span class="label">Boundary</span><span class="value"><code>clean</code></span></div>
+<div class="gate-row"><span class="label">Allowed next stage</span><span class="value"><code>None</code></span></div>
+</section>
+<section class="gate-panel"><h3>Action Path</h3>
+<div class="gate-row"><span class="label">Required action</span><span class="value">escalate-before-revisit</span></div>
+<div class="gate-row"><span class="label">Decision owner</span><span class="value">Release decision owner</span></div>
+<div class="gate-row"><span class="label">Resume path</span><span class="value">Resume from `Revisit` after resolving the active exception rule.</span></div>
+<div class="gate-row"><span class="label">Why paused</span><span class="value">Human escalation is required before the workflow can proceed.</span></div>
+</section>
+</div>
+</aside>
+</div>
+<section class="card" style="margin-top:20px">
+<p class="section-kicker">Curated node panels</p>
+<h2>Node Details</h2>
+<div class="node-grid">
+<article class="node-panel">
+<div class="node-top"><h3>Operational/Release Risk Specialist</h3><div class="mini-badges"><span class="mini-badge">Winning path</span><span class="mini-badge">Blocked</span></div></div>
+<p class="node-summary">Release controls are incomplete for rollback and monitoring ownership.</p>
+<div class="node-meta">
+<span><strong>Stage</strong><code>Approve/Block</code></span>
+<span><strong>Path</strong><code>risk</code></span>
+<span><strong>Action</strong>Escalate the current decision before the run can return for revisit.</span>
+<span><strong>Resume</strong><code>Revisit</code></span>
+</div>
+</article>
+<article class="node-panel">
+<div class="node-top"><h3>Blocker 1</h3><div class="mini-badges"><span class="mini-badge">Blocked</span></div></div>
+<p class="node-summary">An active exception rule must be resolved before proceeding.</p>
+<div class="node-meta">
+<span><strong>Stage</strong><code>Approve/Block</code></span>
+<span><strong>Path</strong><code>revisit</code></span>
+<span><strong>Action</strong>Escalate the current decision before the run can return for revisit.</span>
+<span><strong>Resume</strong><code>Revisit</code></span>
+</div>
+</article>
+<article class="node-panel">
+<div class="node-top"><h3>Blocker 2</h3><div class="mini-badges"><span class="mini-badge">Blocked</span></div></div>
+<p class="node-summary">Human escalation is required before proceeding.</p>
+<div class="node-meta">
+<span><strong>Stage</strong><code>Approve/Block</code></span>
+<span><strong>Path</strong><code>approval</code></span>
+<span><strong>Action</strong>Escalate the current decision before the run can return for revisit.</span>
+<span><strong>Resume</strong><code>Revisit</code></span>
+</div>
+</article>
+<article class="node-panel">
+<div class="node-top"><h3>Resume path</h3><div class="mini-badges"><span class="mini-badge">Resume</span></div></div>
+<p class="node-summary">Resume from `Revisit` after resolving the active exception rule.</p>
+<div class="node-meta">
+<span><strong>Stage</strong><code>Revisit</code></span>
+<span><strong>Path</strong><code>revisit</code></span>
+<span><strong>Action</strong>Escalate the current decision before the run can return for revisit.</span>
+<span><strong>Resume</strong><code>Revisit</code></span>
+</div>
+</article>
+</div>
+</section>
+<section class="card" style="margin-top:20px">
+<h2>Source Artifacts</h2>
+<ul class="link-list">
+<li><a href="run-record.json">Run record</a></li>
+<li><a href="approvals.json">Approvals</a></li>
+<li><a href="deliberation.json">Deliberation</a></li>
+<li><a href="summary-standard.md">Standard summary</a></li>
+<li><a href="summary-exec.md">Executive summary</a></li>
+</ul>
+</section>
+</div>
+</body>
+</html>

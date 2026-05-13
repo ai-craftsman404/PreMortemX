@@ -1,0 +1,54 @@
+{
+    "approvalsRequested": [],
+    "approvalsGranted": [],
+    "recommendation": "Block",
+    "approvalRecommendation": "human-escalation-required",
+    "approvalStatus": "awaiting-human-escalation",
+    "currentAction": "escalate-before-revisit",
+    "resumeGuidance": "Resume from `Revisit` after resolving the active exception rule.",
+    "proceedAllowed": false,
+    "proceedBlockers": [
+        "An active exception rule must be resolved before proceeding.",
+        "Human escalation is required before proceeding."
+    ],
+    "boundaryStatus": "clean",
+    "blockedContextClasses": [],
+    "carryForwardAllowed": true,
+    "transformationStatus": "transformed",
+    "carryForwardLedger": [],
+    "playbookGateStatus": "awaiting-human-escalation",
+    "allowedNextStage": null,
+    "playbook": {
+        "name": "High-Sensitivity Release Decision Approval Playbook",
+        "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/approvals/approval-playbook-high-sensitivity-release-decision.md"
+    },
+    "workflowState": {
+        "lifecycle": "Core Release Risk Lifecycle Map",
+        "currentStage": "Approve/Block",
+        "completedStages": [
+            "Intake",
+            "Assess",
+            "Deliberate"
+        ],
+        "nextStage": "Revisit",
+        "pendingApprovalPlaybook": "High-Sensitivity Release Decision Approval Playbook",
+        "activeExceptionRule": "Missing Evidence Re-entry Rule",
+        "assessEntryStatus": "ready",
+        "assessEntryBlockers": [],
+        "deliberateHandoffStatus": "ready",
+        "handoffBlockers": [],
+        "gateStatus": "awaiting-human-escalation",
+        "allowedNextStage": null,
+        "blockedBy": [
+            "An active exception rule must be resolved before proceeding.",
+            "Human escalation is required before proceeding."
+        ]
+    },
+    "runtimeBoundary": {
+        "name": "Release Risk Boundary And Enforcement Panel",
+        "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/policies/boundary-enforcement-panel-release-risk-synthetic.md"
+    },
+    "notes": [
+        "Permission escalation events belong here."
+    ]
+}

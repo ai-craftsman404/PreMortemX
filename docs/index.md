@@ -38,6 +38,16 @@ $premortemx Validate this architecture and identify the top design risks before 
 - [Approvals](../plugins/premortemx/examples/sample-warn-release/approvals.json)
 - [Risk register](../plugins/premortemx/examples/sample-warn-release/risk-register.md)
 
+## Visual journey surface
+
+The first `v6a` journey-view artifact turns the agent-team and harness path into a visual story:
+
+![V6A journey surface](assets/premortemx-v6a-journey-showcase.png)
+
+- [Journey example](../plugins/premortemx/examples/sample-block-journey/README.md)
+- [Journey HTML](../plugins/premortemx/examples/sample-block-journey/journey-view.html)
+- [Journey JSON](../plugins/premortemx/examples/sample-block-journey/journey-view.json)
+
 ## Validated platforms
 
 - Windows
