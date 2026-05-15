@@ -18,7 +18,7 @@
             "recommendation": "Warn",
             "summary": "Core design can ship only if control evidence is tightened.",
             "evidenceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ],
             "rubric": {
                 "confidence": 3,
@@ -35,7 +35,7 @@
             "recommendation": "Warn",
             "summary": "Operational rollout remains guardrailed but still recoverable.",
             "evidenceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ],
             "rubric": {
                 "confidence": 3,
@@ -52,7 +52,7 @@
             "recommendation": "Block",
             "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
             "evidenceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ],
             "rubric": {
                 "confidence": 4,
@@ -98,9 +98,9 @@
         "finalConfidenceBand": "Medium",
         "summary": "Severity-and-policy override: a credible high-severity risk met the escalation threshold.",
         "supportingEvidence": [
-            "security/journey-refresh.md",
-            "design/journey-refresh.md",
-            "ops/journey-refresh.md"
+            "security/journey-restore2.md",
+            "design/journey-restore2.md",
+            "ops/journey-restore2.md"
         ],
         "decisionOwner": null,
         "ruleTriggered": "severity-and-policy",

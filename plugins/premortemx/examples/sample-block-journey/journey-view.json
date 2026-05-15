@@ -1,8 +1,8 @@
 {
     "schemaVersion": "v6a-1",
-    "runId": "pmx-sample-block-journey-refresh-20260515T111516Z-54e222",
+    "runId": "pmx-sample-block-journey-restore2-20260515T174347Z-6f405d",
     "mode": "release-risk-gating",
-    "generatedAt": "2026-05-15T11:15:16.587608Z",
+    "generatedAt": "2026-05-15T17:43:47.441816Z",
     "failedFutureFrame": {
         "premise": "Assume this plan has already failed in the future.",
         "timeHorizon": "6 months",
@@ -18,7 +18,7 @@
             "decision": "Warn",
             "sourceRole": "Domain Risk Specialist",
             "evidenceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ]
         },
         {
@@ -28,7 +28,7 @@
             "decision": "Warn",
             "sourceRole": "Operational/Release Risk Specialist",
             "evidenceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ]
         },
         {
@@ -38,7 +38,7 @@
             "decision": "Block",
             "sourceRole": "Security/Privacy Risk Specialist",
             "evidenceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ]
         }
     ],
@@ -51,7 +51,7 @@
             "severity": "Warn",
             "summary": "Core design can ship only if control evidence is tightened.",
             "drivingSignals": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ],
             "preventionActions": [
                 "Escalate the blocked decision through the governed approval path.",
@@ -69,7 +69,7 @@
             "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when core design can ship only if control evidence is tightened.",
             "owner": "Release decision owner",
             "sourceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ],
             "isDominant": true,
             "isMostDangerous": true,
@@ -84,7 +84,7 @@
             "severity": "Warn",
             "summary": "Operational rollout remains guardrailed but still recoverable.",
             "drivingSignals": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ],
             "preventionActions": [
                 "Escalate the blocked decision through the governed approval path.",
@@ -102,7 +102,7 @@
             "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when operational rollout remains guardrailed but still recoverable.",
             "owner": "Release decision owner",
             "sourceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ],
             "isDominant": false,
             "isMostDangerous": false,
@@ -117,7 +117,7 @@
             "severity": "Block",
             "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
             "drivingSignals": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ],
             "preventionActions": [
                 "Escalate the blocked decision through the governed approval path.",
@@ -135,7 +135,7 @@
             "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when security evidence suggests a more severe blocker path than the broader team view.",
             "owner": "Release decision owner",
             "sourceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ],
             "isDominant": false,
             "isMostDangerous": true,
@@ -212,7 +212,7 @@
             ],
             "sourceRole": "Domain Risk Specialist",
             "sourceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ],
             "mostLikelyRank": 1,
             "mostDangerousRank": 2
@@ -238,7 +238,7 @@
             ],
             "sourceRole": "Operational/Release Risk Specialist",
             "sourceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ],
             "mostLikelyRank": 2,
             "mostDangerousRank": 3
@@ -264,7 +264,7 @@
             ],
             "sourceRole": "Security/Privacy Risk Specialist",
             "sourceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ],
             "mostLikelyRank": 3,
             "mostDangerousRank": 1
@@ -626,7 +626,7 @@
                 "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
-                    "design/journey-refresh.md"
+                    "design/journey-restore2.md"
                 ],
                 "riskLevel": "Warn",
                 "residualRisk": "Medium",
@@ -675,7 +675,7 @@
                 "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
-                    "ops/journey-refresh.md"
+                    "ops/journey-restore2.md"
                 ],
                 "riskLevel": "Warn",
                 "residualRisk": "Medium",
@@ -724,7 +724,7 @@
                 "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
-                    "security/journey-refresh.md"
+                    "security/journey-restore2.md"
                 ],
                 "riskLevel": "Block",
                 "residualRisk": "Medium",
@@ -891,7 +891,7 @@
                 "label": "branches",
                 "isWinningPath": true,
                 "sourceRefs": [
-                    "design/journey-refresh.md"
+                    "design/journey-restore2.md"
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 1
@@ -904,7 +904,7 @@
                 "label": "branches",
                 "isWinningPath": false,
                 "sourceRefs": [
-                    "ops/journey-refresh.md"
+                    "ops/journey-restore2.md"
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 2
@@ -917,7 +917,7 @@
                 "label": "branches",
                 "isWinningPath": false,
                 "sourceRefs": [
-                    "security/journey-refresh.md"
+                    "security/journey-restore2.md"
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 3

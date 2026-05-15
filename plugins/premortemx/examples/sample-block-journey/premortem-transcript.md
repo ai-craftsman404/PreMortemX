@@ -1,6 +1,6 @@
 # PreMortemX Release Assessment Premortem Transcript
 
-- Run ID: pmx-sample-block-journey-refresh-20260515T111516Z-54e222
+- Run ID: pmx-sample-block-journey-restore2-20260515T174347Z-6f405d
 - Recommendation: `Block`
 - Confidence: `Medium`
 
@@ -15,21 +15,21 @@ It is 6 months from now. This release plan has failed.
 - Reason: Core design can ship only if control evidence is tightened.
 - Source role: `Domain Risk Specialist`
 - Decision pressure: `Warn`
-- Evidence refs: design/journey-refresh.md
+- Evidence refs: design/journey-restore2.md
 
 ### Operational/Release Risk Specialist
 
 - Reason: Operational rollout remains guardrailed but still recoverable.
 - Source role: `Operational/Release Risk Specialist`
 - Decision pressure: `Warn`
-- Evidence refs: ops/journey-refresh.md
+- Evidence refs: ops/journey-restore2.md
 
 ### Security/Privacy Risk Specialist
 
 - Reason: Security evidence suggests a more severe blocker path than the broader team view.
 - Source role: `Security/Privacy Risk Specialist`
 - Decision pressure: `Block`
-- Evidence refs: security/journey-refresh.md
+- Evidence refs: security/journey-restore2.md
 
 ## Per-Path Deep Dives
 

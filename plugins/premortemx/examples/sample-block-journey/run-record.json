@@ -1,11 +1,11 @@
 {
     "schemaVersion": "1.0",
-    "runId": "pmx-sample-block-journey-refresh-20260515T111516Z-54e222",
+    "runId": "pmx-sample-block-journey-restore2-20260515T174347Z-6f405d",
     "pluginVersion": "0.4.0",
-    "createdAt": "2026-05-15T11:15:16.470914Z",
-    "updatedAt": "2026-05-15T11:15:16.587608Z",
+    "createdAt": "2026-05-15T17:43:47.325104Z",
+    "updatedAt": "2026-05-15T17:43:47.441816Z",
     "status": "adjudicated",
-    "projectSlug": "sample-block-journey-refresh",
+    "projectSlug": "sample-block-journey-restore2",
     "taskType": "premortem",
     "taskCategory": "risk-analysis",
     "initiator": "codex",
@@ -13,9 +13,9 @@
     "approvalMode": "adaptive",
     "privacyMode": "privacy-first-hybrid",
     "retentionClass": "standard",
-    "artifactPath": "runs/2026/05/pmx-sample-block-journey-refresh-20260515T111516Z-54e222",
+    "artifactPath": "runs/2026/05/pmx-sample-block-journey-restore2-20260515T174347Z-6f405d",
     "registryRefs": {
-        "indexKey": "2026-05/pmx-sample-block-journey-refresh-20260515T111516Z-54e222"
+        "indexKey": "2026-05/pmx-sample-block-journey-restore2-20260515T174347Z-6f405d"
     },
     "inputFingerprint": {
         "contextHash": null,
@@ -206,7 +206,7 @@
             "recommendation": "Block",
             "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
             "evidenceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ]
         },
         {
@@ -214,7 +214,7 @@
             "recommendation": "Warn",
             "summary": "Core design can ship only if control evidence is tightened.",
             "evidenceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ]
         },
         {
@@ -222,7 +222,7 @@
             "recommendation": "Warn",
             "summary": "Operational rollout remains guardrailed but still recoverable.",
             "evidenceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ]
         }
     ],
@@ -235,7 +235,7 @@
             "decision": "Warn",
             "sourceRole": "Domain Risk Specialist",
             "evidenceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ]
         },
         {
@@ -245,7 +245,7 @@
             "decision": "Warn",
             "sourceRole": "Operational/Release Risk Specialist",
             "evidenceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ]
         },
         {
@@ -255,7 +255,7 @@
             "decision": "Block",
             "sourceRole": "Security/Privacy Risk Specialist",
             "evidenceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ]
         }
     ],
@@ -281,7 +281,7 @@
             ],
             "sourceRole": "Domain Risk Specialist",
             "sourceRefs": [
-                "design/journey-refresh.md"
+                "design/journey-restore2.md"
             ],
             "mostLikelyRank": 1,
             "mostDangerousRank": 2
@@ -307,7 +307,7 @@
             ],
             "sourceRole": "Operational/Release Risk Specialist",
             "sourceRefs": [
-                "ops/journey-refresh.md"
+                "ops/journey-restore2.md"
             ],
             "mostLikelyRank": 2,
             "mostDangerousRank": 3
@@ -333,7 +333,7 @@
             ],
             "sourceRole": "Security/Privacy Risk Specialist",
             "sourceRefs": [
-                "security/journey-refresh.md"
+                "security/journey-restore2.md"
             ],
             "mostLikelyRank": 3,
             "mostDangerousRank": 1
@@ -421,7 +421,7 @@
                 "recommendation": "Warn",
                 "summary": "Core design can ship only if control evidence is tightened.",
                 "evidenceRefs": [
-                    "design/journey-refresh.md"
+                    "design/journey-restore2.md"
                 ],
                 "rubric": {
                     "confidence": 3,
@@ -438,7 +438,7 @@
                 "recommendation": "Warn",
                 "summary": "Operational rollout remains guardrailed but still recoverable.",
                 "evidenceRefs": [
-                    "ops/journey-refresh.md"
+                    "ops/journey-restore2.md"
                 ],
                 "rubric": {
                     "confidence": 3,
@@ -455,7 +455,7 @@
                 "recommendation": "Block",
                 "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
                 "evidenceRefs": [
-                    "security/journey-refresh.md"
+                    "security/journey-restore2.md"
                 ],
                 "rubric": {
                     "confidence": 4,
@@ -501,9 +501,9 @@
             "finalConfidenceBand": "Medium",
             "summary": "Severity-and-policy override: a credible high-severity risk met the escalation threshold.",
             "supportingEvidence": [
-                "security/journey-refresh.md",
-                "design/journey-refresh.md",
-                "ops/journey-refresh.md"
+                "security/journey-restore2.md",
+                "design/journey-restore2.md",
+                "ops/journey-restore2.md"
             ],
             "decisionOwner": null,
             "ruleTriggered": "severity-and-policy",
