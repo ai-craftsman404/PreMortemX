@@ -42,7 +42,7 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 The current `v6a` journey-view artifact turns the agent-team and harness path into a visual story with failed-future framing, rubric-based classification, and richer branch comparison:
 
-![V6A journey surface](assets/premortemx-v6a-journey-showcase.png)
+![V6A journey surface](assets/premortemx-v6a-journey-showcase-journeyfirst.png)
 
 - [Journey example](../plugins/premortemx/examples/sample-block-journey/README.md)
 - [Journey HTML](../plugins/premortemx/examples/sample-block-journey/journey-view.html)

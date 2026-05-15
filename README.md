@@ -131,7 +131,7 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 This is the current visual journey-view artifact generated from a governed `Block` run:
 
-<img src="assets/premortemx-v6a-journey-showcase.png" alt="PreMortemX v6a journey view showing failed-future framing, classified risk branches, blocker precedence, branch comparison, and the gate control panel." width="960">
+<img src="assets/premortemx-v6a-journey-showcase-journeyfirst.png" alt="PreMortemX v6a journey view showing failed-future framing, classified risk branches, blocker precedence, branch comparison, and the gate control panel." width="960">
 
 - [Journey example README](plugins/premortemx/examples/sample-block-journey/README.md)
 - [Journey view HTML](plugins/premortemx/examples/sample-block-journey/journey-view.html)
