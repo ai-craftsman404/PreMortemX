@@ -1,8 +1,439 @@
 {
     "schemaVersion": "v6a-1",
-    "runId": "pmx-v6a-inspection-20260513T163504Z-1658e4",
+    "runId": "pmx-sample-block-journey-refresh-20260515T111516Z-54e222",
     "mode": "release-risk-gating",
-    "generatedAt": "2026-05-13T17:32:41.968212Z",
+    "generatedAt": "2026-05-15T11:15:16.587608Z",
+    "failedFutureFrame": {
+        "premise": "Assume this plan has already failed in the future.",
+        "timeHorizon": "6 months",
+        "summary": "It is 6 months from now. This release plan has failed.",
+        "scope": "release plan",
+        "successInversion": "The plan did not land safely; work backward from that failed future."
+    },
+    "rawFailureReasons": [
+        {
+            "reasonId": "reason-1",
+            "title": "Domain Risk Specialist",
+            "reason": "Core design can ship only if control evidence is tightened.",
+            "decision": "Warn",
+            "sourceRole": "Domain Risk Specialist",
+            "evidenceRefs": [
+                "design/journey-refresh.md"
+            ]
+        },
+        {
+            "reasonId": "reason-2",
+            "title": "Operational/Release Risk Specialist",
+            "reason": "Operational rollout remains guardrailed but still recoverable.",
+            "decision": "Warn",
+            "sourceRole": "Operational/Release Risk Specialist",
+            "evidenceRefs": [
+                "ops/journey-refresh.md"
+            ]
+        },
+        {
+            "reasonId": "reason-3",
+            "title": "Security/Privacy Risk Specialist",
+            "reason": "Security evidence suggests a more severe blocker path than the broader team view.",
+            "decision": "Block",
+            "sourceRole": "Security/Privacy Risk Specialist",
+            "evidenceRefs": [
+                "security/journey-refresh.md"
+            ]
+        }
+    ],
+    "likelyFailurePaths": [
+        {
+            "id": "path-1",
+            "title": "Domain Risk Specialist",
+            "plausibility": "Rank 1",
+            "dangerRank": "Rank 2",
+            "severity": "Warn",
+            "summary": "Core design can ship only if control evidence is tightened.",
+            "drivingSignals": [
+                "design/journey-refresh.md"
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "hiddenAssumptions": [
+                "Current scope, evidence, and governance inputs are sufficient for the present decision posture."
+            ],
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when core design can ship only if control evidence is tightened.",
+            "owner": "Release decision owner",
+            "sourceRefs": [
+                "design/journey-refresh.md"
+            ],
+            "isDominant": true,
+            "isMostDangerous": true,
+            "isMostActionable": true,
+            "sourceRole": "Domain Risk Specialist"
+        },
+        {
+            "id": "path-2",
+            "title": "Operational/Release Risk Specialist",
+            "plausibility": "Rank 2",
+            "dangerRank": "Rank 3",
+            "severity": "Warn",
+            "summary": "Operational rollout remains guardrailed but still recoverable.",
+            "drivingSignals": [
+                "ops/journey-refresh.md"
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "hiddenAssumptions": [
+                "Current scope, evidence, and governance inputs are sufficient for the present decision posture."
+            ],
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when operational rollout remains guardrailed but still recoverable.",
+            "owner": "Release decision owner",
+            "sourceRefs": [
+                "ops/journey-refresh.md"
+            ],
+            "isDominant": false,
+            "isMostDangerous": false,
+            "isMostActionable": false,
+            "sourceRole": "Operational/Release Risk Specialist"
+        },
+        {
+            "id": "path-3",
+            "title": "Security/Privacy Risk Specialist",
+            "plausibility": "Rank 3",
+            "dangerRank": "Rank 1",
+            "severity": "Block",
+            "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
+            "drivingSignals": [
+                "security/journey-refresh.md"
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "hiddenAssumptions": [
+                "Current scope, evidence, and governance inputs are sufficient for the present decision posture."
+            ],
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when security evidence suggests a more severe blocker path than the broader team view.",
+            "owner": "Release decision owner",
+            "sourceRefs": [
+                "security/journey-refresh.md"
+            ],
+            "isDominant": false,
+            "isMostDangerous": true,
+            "isMostActionable": false,
+            "sourceRole": "Security/Privacy Risk Specialist"
+        }
+    ],
+    "branchComparison": [
+        {
+            "id": "path-1",
+            "title": "Domain Risk Specialist",
+            "sourceRole": "Domain Risk Specialist",
+            "severity": "Warn",
+            "plausibility": "Rank 1",
+            "dangerRank": "Rank 2",
+            "hiddenAssumptionCount": 1,
+            "earlyWarningCount": 2,
+            "preventionActionCount": 4,
+            "signalCount": 1,
+            "flags": [
+                "Most likely",
+                "Most dangerous",
+                "Most actionable"
+            ]
+        },
+        {
+            "id": "path-2",
+            "title": "Operational/Release Risk Specialist",
+            "sourceRole": "Operational/Release Risk Specialist",
+            "severity": "Warn",
+            "plausibility": "Rank 2",
+            "dangerRank": "Rank 3",
+            "hiddenAssumptionCount": 1,
+            "earlyWarningCount": 2,
+            "preventionActionCount": 4,
+            "signalCount": 1,
+            "flags": []
+        },
+        {
+            "id": "path-3",
+            "title": "Security/Privacy Risk Specialist",
+            "sourceRole": "Security/Privacy Risk Specialist",
+            "severity": "Block",
+            "plausibility": "Rank 3",
+            "dangerRank": "Rank 1",
+            "hiddenAssumptionCount": 1,
+            "earlyWarningCount": 2,
+            "preventionActionCount": 4,
+            "signalCount": 1,
+            "flags": [
+                "Most dangerous"
+            ]
+        }
+    ],
+    "riskPathways": [
+        {
+            "pathId": "path-1",
+            "title": "Domain Risk Specialist",
+            "decision": "Warn",
+            "pathway": "Core design can ship only if control evidence is tightened.",
+            "failedFuture": "The release plan fails because this path materialized: Core design can ship only if control evidence is tightened.",
+            "failureStory": "It is 6 months from now. This release plan has failed. The failure became visible when core design can ship only if control evidence is tightened.",
+            "hiddenAssumptionId": "assumption-1",
+            "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "sourceRole": "Domain Risk Specialist",
+            "sourceRefs": [
+                "design/journey-refresh.md"
+            ],
+            "mostLikelyRank": 1,
+            "mostDangerousRank": 2
+        },
+        {
+            "pathId": "path-2",
+            "title": "Operational/Release Risk Specialist",
+            "decision": "Warn",
+            "pathway": "Operational rollout remains guardrailed but still recoverable.",
+            "failedFuture": "The release plan fails because this path materialized: Operational rollout remains guardrailed but still recoverable.",
+            "failureStory": "It is 6 months from now. This release plan has failed. The failure became visible when operational rollout remains guardrailed but still recoverable.",
+            "hiddenAssumptionId": "assumption-1",
+            "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "sourceRole": "Operational/Release Risk Specialist",
+            "sourceRefs": [
+                "ops/journey-refresh.md"
+            ],
+            "mostLikelyRank": 2,
+            "mostDangerousRank": 3
+        },
+        {
+            "pathId": "path-3",
+            "title": "Security/Privacy Risk Specialist",
+            "decision": "Block",
+            "pathway": "Security evidence suggests a more severe blocker path than the broader team view.",
+            "failedFuture": "The release plan fails because this path materialized: Security evidence suggests a more severe blocker path than the broader team view.",
+            "failureStory": "It is 6 months from now. This release plan has failed. The failure became visible when security evidence suggests a more severe blocker path than the broader team view.",
+            "hiddenAssumptionId": "assumption-1",
+            "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "sourceRole": "Security/Privacy Risk Specialist",
+            "sourceRefs": [
+                "security/journey-refresh.md"
+            ],
+            "mostLikelyRank": 3,
+            "mostDangerousRank": 1
+        }
+    ],
+    "assumptionLedger": [
+        {
+            "assumptionId": "assumption-1",
+            "assumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "status": "monitor",
+            "hidden": false,
+            "source": "runtime:default",
+            "sourceRefs": [
+                "run-record.json"
+            ]
+        }
+    ],
+    "failureSynthesis": {
+        "summary": "3 likely failure path(s) and 0 hidden assumption(s) are active in the current harness state.",
+        "failedFuture": "The release plan fails because this path materialized: Core design can ship only if control evidence is tightened.",
+        "mostLikelyFailure": "Core design can ship only if control evidence is tightened.",
+        "mostDangerousFailure": "Core design can ship only if control evidence is tightened.",
+        "highestLeverageHiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+        "revisedPlan": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ],
+        "preLaunchChecklist": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ],
+        "likelyFailurePathIds": [
+            "path-1",
+            "path-2",
+            "path-3"
+        ],
+        "hiddenAssumptionIds": [],
+        "earlyWarnings": [
+            "The current decision posture requires explicit confirmation before proceeding.",
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle."
+        ],
+        "preventionActions": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ],
+        "mostLikelyFailurePathId": "path-1",
+        "mostDangerousFailurePathId": "path-1",
+        "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+        "checklist": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ]
+    },
+    "harnessContribution": {
+        "specialistRoles": [
+            "Domain Risk Specialist",
+            "Operational/Release Risk Specialist",
+            "Security/Privacy Risk Specialist"
+        ],
+        "adjudicationMethod": "Independent specialist passes followed by orchestrator adjudication.",
+        "rankingBasis": "Paths are ranked using specialist findings, evidence pressure, blocker precedence, and governed workflow/runtime state.",
+        "disagreementSummary": null,
+        "orchestratorNote": null
+    },
+    "classificationLayer": {
+        "rubricDimensions": [
+            {
+                "label": "Evidence strength",
+                "score": 4,
+                "summary": "How strong the current evidence base is for the active decision path."
+            },
+            {
+                "label": "Evidence completeness",
+                "score": 4,
+                "summary": "How complete the evidence bundle and handoff state are."
+            },
+            {
+                "label": "Risk severity",
+                "score": 4,
+                "summary": "How severe the projected downside is if the dominant failure path materializes."
+            },
+            {
+                "label": "Control readiness",
+                "score": 1,
+                "summary": "How ready the mitigations, approvals, and blockers are for safe progression."
+            },
+            {
+                "label": "Policy fit",
+                "score": 3,
+                "summary": "How well the current path fits the governing release policy posture."
+            },
+            {
+                "label": "Decision sensitivity",
+                "score": 4,
+                "summary": "How sensitive the decision is to missing evidence or incorrect assumptions."
+            },
+            {
+                "label": "Specialist disagreement",
+                "score": 3,
+                "summary": "How much the specialist views diverged before adjudication."
+            }
+        ],
+        "taxonomy": {
+            "label": "Re-entry path",
+            "rationale": "Progression is paused until remediation or escalation re-opens the governed path."
+        },
+        "factorChips": [
+            {
+                "label": "Risk severity",
+                "value": "4/5"
+            },
+            {
+                "label": "Control readiness",
+                "value": "1/5"
+            },
+            {
+                "label": "Policy fit",
+                "value": "3/5"
+            },
+            {
+                "label": "Decision sensitivity",
+                "value": "4/5"
+            },
+            {
+                "label": "Specialist disagreement",
+                "value": "3/5"
+            }
+        ],
+        "agentTeamView": {
+            "label": "Warn majority (2/3)",
+            "distribution": {
+                "Warn": 2,
+                "Block": 1
+            },
+            "consensusDecision": "Warn",
+            "consensusStrength": "majority"
+        },
+        "finalClassification": {
+            "decision": "Block",
+            "flowLabel": "Re-entry path",
+            "confidenceBand": "Medium"
+        },
+        "adjudicationDelta": {
+            "agentTeamView": "Warn majority (2/3)",
+            "agentTeamDecision": "Warn",
+            "orchestratorFinalClass": "Block",
+            "ruleTriggered": "severity-and-policy",
+            "whyChanged": "The orchestrator finalized `Block` because the triggered rule `severity-and-policy` outweighed a simpler consensus reading.",
+            "humanEscalationRequired": false
+        },
+        "residualMonitor": {
+            "residualRisk": "Medium",
+            "whatRemainsTrue": [
+                "Residual risk remains `Medium` even if progression is later approved.",
+                "A Block decision must be explicitly escalated or reversed with new evidence before proceeding."
+            ],
+            "owner": "Release decision owner",
+            "reentryTrigger": "Resume from `Revisit` when the next action items are complete."
+        }
+    },
     "currentNodeId": "stage-approve-block",
     "winningNodeId": "branch-risk-1",
     "isCompact": false,
@@ -18,23 +449,24 @@
                 "status": "completed",
                 "pathType": "mainline",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
                 "summary": "Intake stage in the governed lifecycle.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "run-record.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": true,
                 "isBlocked": false,
                 "blockedBy": [],
-                "displayOrder": 0
+                "displayOrder": 0,
+                "details": {}
             },
             {
                 "id": "stage-assess",
@@ -45,23 +477,24 @@
                 "status": "completed",
                 "pathType": "mainline",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
                 "summary": "Assess stage in the governed lifecycle.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "run-record.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": true,
                 "isBlocked": false,
                 "blockedBy": [],
-                "displayOrder": 1
+                "displayOrder": 1,
+                "details": {}
             },
             {
                 "id": "stage-deliberate",
@@ -72,23 +505,24 @@
                 "status": "completed",
                 "pathType": "mainline",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
                 "summary": "Deliberate stage in the governed lifecycle.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "run-record.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": true,
                 "isBlocked": false,
                 "blockedBy": [],
-                "displayOrder": 2
+                "displayOrder": 2,
+                "details": {}
             },
             {
                 "id": "stage-approve-block",
@@ -99,26 +533,26 @@
                 "status": "current",
                 "pathType": "mainline",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
                 "summary": "Approve/Block stage in the governed lifecycle.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "run-record.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": true,
                 "isWinningPath": true,
                 "isBlocked": true,
                 "blockedBy": [
-                    "An active exception rule must be resolved before proceeding.",
-                    "Human escalation is required before proceeding."
+                    "The current decision posture requires explicit confirmation before proceeding."
                 ],
-                "displayOrder": 3
+                "displayOrder": 3,
+                "details": {}
             },
             {
                 "id": "stage-monitor",
@@ -129,23 +563,24 @@
                 "status": "next",
                 "pathType": "mainline",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
                 "summary": "Monitor stage in the governed lifecycle.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "run-record.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": false,
                 "isBlocked": false,
                 "blockedBy": [],
-                "displayOrder": 4
+                "displayOrder": 4,
+                "details": {}
             },
             {
                 "id": "stage-revisit",
@@ -156,56 +591,27 @@
                 "status": "pending",
                 "pathType": "mainline",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
                 "summary": "Revisit stage in the governed lifecycle.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "run-record.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": false,
                 "isBlocked": false,
                 "blockedBy": [],
-                "displayOrder": 5
+                "displayOrder": 5,
+                "details": {}
             },
             {
                 "id": "branch-risk-1",
-                "parentId": "stage-approve-block",
-                "kind": "branch",
-                "stage": "Approve/Block",
-                "title": "Operational/Release Risk Specialist",
-                "status": "blocked",
-                "pathType": "risk",
-                "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
-                "boundaryStatus": "clean",
-                "summary": "Release controls are incomplete for rollback and monitoring ownership.",
-                "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
-                "resumeStage": "Revisit",
-                "sourceRefs": [
-                    "release/checklist.md#controls"
-                ],
-                "riskLevel": "Block",
-                "residualRisk": "Medium",
-                "approvalStatus": "awaiting-human-escalation",
-                "isCurrent": true,
-                "isWinningPath": true,
-                "isBlocked": true,
-                "blockedBy": [
-                    "An active exception rule must be resolved before proceeding.",
-                    "Human escalation is required before proceeding."
-                ],
-                "displayOrder": 101
-            },
-            {
-                "id": "branch-risk-2",
                 "parentId": "stage-approve-block",
                 "kind": "branch",
                 "stage": "Approve/Block",
@@ -213,26 +619,94 @@
                 "status": "blocked",
                 "pathType": "risk",
                 "decision": "Warn",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
-                "summary": "Operational rollout sequencing remains brittle under rollback pressure.",
+                "summary": "Core design can ship only if control evidence is tightened.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
-                    "ops/rollout.md#rollback"
+                    "design/journey-refresh.md"
                 ],
-                "riskLevel": "Block",
+                "riskLevel": "Warn",
                 "residualRisk": "Medium",
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
+                "isCurrent": true,
+                "isWinningPath": true,
+                "isBlocked": true,
+                "blockedBy": [
+                    "The current decision posture requires explicit confirmation before proceeding."
+                ],
+                "displayOrder": 101,
+                "details": {
+                    "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when core design can ship only if control evidence is tightened.",
+                    "hiddenAssumptions": [
+                        "Current scope, evidence, and governance inputs are sufficient for the present decision posture."
+                    ],
+                    "earlyWarnings": [
+                        "The current decision posture requires explicit confirmation before proceeding.",
+                        "Escalate the blocked decision through the governed approval path."
+                    ],
+                    "preventionActions": [
+                        "Escalate the blocked decision through the governed approval path.",
+                        "Resolve the evidence gap before the next revisit cycle.",
+                        "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                        "Resume from `Revisit` when the next action items are complete."
+                    ],
+                    "sourceRole": "Domain Risk Specialist",
+                    "plausibility": "Rank 1",
+                    "isMostDangerous": true,
+                    "isMostActionable": true
+                }
+            },
+            {
+                "id": "branch-risk-2",
+                "parentId": "stage-approve-block",
+                "kind": "branch",
+                "stage": "Approve/Block",
+                "title": "Operational/Release Risk Specialist",
+                "status": "blocked",
+                "pathType": "risk",
+                "decision": "Warn",
+                "gateStatus": "confirmation-required",
+                "boundaryStatus": "clean",
+                "summary": "Operational rollout remains guardrailed but still recoverable.",
+                "owner": "Release decision owner",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "resumeStage": "Revisit",
+                "sourceRefs": [
+                    "ops/journey-refresh.md"
+                ],
+                "riskLevel": "Warn",
+                "residualRisk": "Medium",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": false,
                 "isBlocked": true,
                 "blockedBy": [
-                    "An active exception rule must be resolved before proceeding.",
-                    "Human escalation is required before proceeding."
+                    "The current decision posture requires explicit confirmation before proceeding."
                 ],
-                "displayOrder": 102
+                "displayOrder": 102,
+                "details": {
+                    "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when operational rollout remains guardrailed but still recoverable.",
+                    "hiddenAssumptions": [
+                        "Current scope, evidence, and governance inputs are sufficient for the present decision posture."
+                    ],
+                    "earlyWarnings": [
+                        "The current decision posture requires explicit confirmation before proceeding.",
+                        "Escalate the blocked decision through the governed approval path."
+                    ],
+                    "preventionActions": [
+                        "Escalate the blocked decision through the governed approval path.",
+                        "Resolve the evidence gap before the next revisit cycle.",
+                        "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                        "Resume from `Revisit` when the next action items are complete."
+                    ],
+                    "sourceRole": "Operational/Release Risk Specialist",
+                    "plausibility": "Rank 2",
+                    "isMostDangerous": false,
+                    "isMostActionable": false
+                }
             },
             {
                 "id": "branch-risk-3",
@@ -242,27 +716,46 @@
                 "title": "Security/Privacy Risk Specialist",
                 "status": "blocked",
                 "pathType": "risk",
-                "decision": "Warn",
-                "gateStatus": "awaiting-human-escalation",
+                "decision": "Block",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
-                "summary": "Security posture is acceptable but not strong enough to offset weak rollout controls.",
+                "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
-                    "security/review.md#summary"
+                    "security/journey-refresh.md"
                 ],
                 "riskLevel": "Block",
                 "residualRisk": "Medium",
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": false,
                 "isBlocked": true,
                 "blockedBy": [
-                    "An active exception rule must be resolved before proceeding.",
-                    "Human escalation is required before proceeding."
+                    "The current decision posture requires explicit confirmation before proceeding."
                 ],
-                "displayOrder": 103
+                "displayOrder": 103,
+                "details": {
+                    "deepDive": "It is 6 months from now. This release plan has failed. The failure became visible when security evidence suggests a more severe blocker path than the broader team view.",
+                    "hiddenAssumptions": [
+                        "Current scope, evidence, and governance inputs are sufficient for the present decision posture."
+                    ],
+                    "earlyWarnings": [
+                        "The current decision posture requires explicit confirmation before proceeding.",
+                        "Escalate the blocked decision through the governed approval path."
+                    ],
+                    "preventionActions": [
+                        "Escalate the blocked decision through the governed approval path.",
+                        "Resolve the evidence gap before the next revisit cycle.",
+                        "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                        "Resume from `Revisit` when the next action items are complete."
+                    ],
+                    "sourceRole": "Security/Privacy Risk Specialist",
+                    "plausibility": "Rank 3",
+                    "isMostDangerous": true,
+                    "isMostActionable": false
+                }
             },
             {
                 "id": "gate-blocker-1",
@@ -271,43 +764,13 @@
                 "stage": "Approve/Block",
                 "title": "Blocker 1",
                 "status": "blocked",
-                "pathType": "revisit",
-                "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
-                "boundaryStatus": "clean",
-                "summary": "An active exception rule must be resolved before proceeding.",
-                "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
-                "resumeStage": "Revisit",
-                "sourceRefs": [
-                    "approvals.json",
-                    "run-record.json"
-                ],
-                "riskLevel": null,
-                "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
-                "isCurrent": false,
-                "isWinningPath": false,
-                "isBlocked": true,
-                "blockedBy": [
-                    "An active exception rule must be resolved before proceeding."
-                ],
-                "displayOrder": 201
-            },
-            {
-                "id": "gate-blocker-2",
-                "parentId": "stage-approve-block",
-                "kind": "gate",
-                "stage": "Approve/Block",
-                "title": "Blocker 2",
-                "status": "blocked",
                 "pathType": "approval",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
-                "summary": "Human escalation is required before proceeding.",
+                "summary": "The current decision posture requires explicit confirmation before proceeding.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "approvals.json",
@@ -315,14 +778,15 @@
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": false,
                 "isBlocked": true,
                 "blockedBy": [
-                    "Human escalation is required before proceeding."
+                    "The current decision posture requires explicit confirmation before proceeding."
                 ],
-                "displayOrder": 202
+                "displayOrder": 201,
+                "details": {}
             },
             {
                 "id": "reentry-shared",
@@ -331,25 +795,26 @@
                 "stage": "Revisit",
                 "title": "Resume path",
                 "status": "resume",
-                "pathType": "revisit",
+                "pathType": "remediation",
                 "decision": "Block",
-                "gateStatus": "awaiting-human-escalation",
+                "gateStatus": "confirmation-required",
                 "boundaryStatus": "clean",
-                "summary": "Resume from `Revisit` after resolving the active exception rule.",
+                "summary": "Resume from `Revisit` when the next action items are complete.",
                 "owner": "Release decision owner",
-                "nextAction": "Escalate the current decision before the run can return for revisit.",
+                "nextAction": "Escalate the blocked decision and resolve the evidence gap before re-entry.",
                 "resumeStage": "Revisit",
                 "sourceRefs": [
                     "approvals.json"
                 ],
                 "riskLevel": null,
                 "residualRisk": null,
-                "approvalStatus": "awaiting-human-escalation",
+                "approvalStatus": "pending-confirmation",
                 "isCurrent": false,
                 "isWinningPath": false,
                 "isBlocked": false,
                 "blockedBy": [],
-                "displayOrder": 300
+                "displayOrder": 300,
+                "details": {}
             }
         ],
         "edges": [
@@ -426,7 +891,7 @@
                 "label": "branches",
                 "isWinningPath": true,
                 "sourceRefs": [
-                    "release/checklist.md#controls"
+                    "design/journey-refresh.md"
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 1
@@ -439,7 +904,7 @@
                 "label": "branches",
                 "isWinningPath": false,
                 "sourceRefs": [
-                    "ops/rollout.md#rollback"
+                    "ops/journey-refresh.md"
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 2
@@ -452,7 +917,7 @@
                 "label": "branches",
                 "isWinningPath": false,
                 "sourceRefs": [
-                    "security/review.md#summary"
+                    "security/journey-refresh.md"
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 3
@@ -471,19 +936,6 @@
                 "precedenceRank": 1
             },
             {
-                "id": "edge-stage-approve-block-to-gate-blocker-2",
-                "from": "stage-approve-block",
-                "to": "gate-blocker-2",
-                "type": "blocked-by",
-                "label": "blocked by",
-                "isWinningPath": false,
-                "sourceRefs": [
-                    "approvals.json"
-                ],
-                "isBlockedEdge": true,
-                "precedenceRank": 2
-            },
-            {
                 "id": "edge-gate-blocker-1-to-reentry-shared",
                 "from": "gate-blocker-1",
                 "to": "reentry-shared",
@@ -495,35 +947,22 @@
                 ],
                 "isBlockedEdge": false,
                 "precedenceRank": 1
-            },
-            {
-                "id": "edge-gate-blocker-2-to-reentry-shared",
-                "from": "gate-blocker-2",
-                "to": "reentry-shared",
-                "type": "reenters",
-                "label": "re-enters",
-                "isWinningPath": false,
-                "sourceRefs": [
-                    "approvals.json"
-                ],
-                "isBlockedEdge": false,
-                "precedenceRank": 2
             }
         ]
     },
     "gateCard": {
         "nodeId": "stage-approve-block",
         "finalRecommendation": "Block",
-        "approvalStatus": "awaiting-human-escalation",
-        "gateStatus": "awaiting-human-escalation",
-        "blockerPrecedence": "An active exception rule must be resolved before proceeding.",
+        "approvalStatus": "pending-confirmation",
+        "gateStatus": "confirmation-required",
+        "blockerPrecedence": "The current decision posture requires explicit confirmation before proceeding.",
         "allowedNextStage": null,
         "decisionOwner": "Release decision owner",
         "nextOwner": "Release decision owner",
-        "resumeGuidance": "Resume from `Revisit` after resolving the active exception rule.",
+        "resumeGuidance": "Resume from `Revisit` when the next action items are complete.",
         "boundaryStatus": "clean",
         "confirmationRequired": true,
-        "confirmationReason": "Human escalation is required before the workflow can proceed.",
-        "currentAction": "escalate-before-revisit"
+        "confirmationReason": "A Block decision must be explicitly escalated or reversed with new evidence before proceeding.",
+        "currentAction": "reverse-or-escalate"
     }
 }

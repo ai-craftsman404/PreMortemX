@@ -169,6 +169,10 @@ This bundle shows the first `v6a` visual risk-journey surface:
 - branch and blocker flow
 - gate-card decision control
 - resume and re-entry path visibility
+- explicit failed-future framing with a projection horizon cue
+- rubric-based classification directly beneath the verdict
+- richer branch comparison across all tracked failure paths
+- visible agent-team and harness contribution
 
 ---
 
@@ -233,7 +237,7 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 - `v3`: multi-agent adjudication, governed calibration, reviewed-run promotion, and approval-controlled change flows
 - `v4`: Python-first cross-platform runtime with PowerShell fallback compatibility
 - `v5`: governed execution-environment assets for prompts, workflow, policy/config, context flow, and reusable templates
-- `v6a`: first visual risk-journey surface derived from governed run artifacts
+- `v6a`: first visual failed-future journey surface with classification, branch comparison, and harness-visible pathing
 
 ### Version evolution
 
@@ -244,7 +248,7 @@ By design, the user sees the adjudicated outcome rather than raw internal debate
 | `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
 | `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
 | `v5` | Governed execution environment | Added prompt/workflow/runtime asset layers, gate-state enforcement, boundary/context controls, stronger operator-facing run artifacts, and higher-assurance synthetic/adversarial validation |
-| `v6a` | Visual risk journey | Added the first derived `journey-view` surface with lifecycle rail, branch flow, gate control, and resume-path visualization |
+| `v6a` | Visual risk journey | Added the first derived `journey-view` surface with failed-future framing, lifecycle rail, branch comparison, classification, gate control, and resume-path visualization |
 
 ### Decision model
 

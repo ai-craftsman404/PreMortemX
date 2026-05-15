@@ -2,21 +2,20 @@
     "approvalsRequested": [],
     "approvalsGranted": [],
     "recommendation": "Block",
-    "approvalRecommendation": "human-escalation-required",
-    "approvalStatus": "awaiting-human-escalation",
-    "currentAction": "escalate-before-revisit",
-    "resumeGuidance": "Resume from `Revisit` after resolving the active exception rule.",
+    "approvalRecommendation": "stay-conservative",
+    "approvalStatus": "pending-confirmation",
+    "currentAction": "reverse-or-escalate",
+    "resumeGuidance": "Resume from `Revisit` when the next action items are complete.",
     "proceedAllowed": false,
     "proceedBlockers": [
-        "An active exception rule must be resolved before proceeding.",
-        "Human escalation is required before proceeding."
+        "The current decision posture requires explicit confirmation before proceeding."
     ],
     "boundaryStatus": "clean",
     "blockedContextClasses": [],
     "carryForwardAllowed": true,
     "transformationStatus": "transformed",
     "carryForwardLedger": [],
-    "playbookGateStatus": "awaiting-human-escalation",
+    "playbookGateStatus": "confirmation-required",
     "allowedNextStage": null,
     "playbook": {
         "name": "High-Sensitivity Release Decision Approval Playbook",
@@ -32,16 +31,15 @@
         ],
         "nextStage": "Revisit",
         "pendingApprovalPlaybook": "High-Sensitivity Release Decision Approval Playbook",
-        "activeExceptionRule": "Missing Evidence Re-entry Rule",
+        "activeExceptionRule": null,
         "assessEntryStatus": "ready",
         "assessEntryBlockers": [],
         "deliberateHandoffStatus": "ready",
         "handoffBlockers": [],
-        "gateStatus": "awaiting-human-escalation",
+        "gateStatus": "confirmation-required",
         "allowedNextStage": null,
         "blockedBy": [
-            "An active exception rule must be resolved before proceeding.",
-            "Human escalation is required before proceeding."
+            "The current decision posture requires explicit confirmation before proceeding."
         ]
     },
     "runtimeBoundary": {

@@ -1,0 +1,567 @@
+{
+    "schemaVersion": "1.0",
+    "runId": "pmx-sample-block-journey-refresh-20260515T111516Z-54e222",
+    "pluginVersion": "0.4.0",
+    "createdAt": "2026-05-15T11:15:16.470914Z",
+    "updatedAt": "2026-05-15T11:15:16.587608Z",
+    "status": "adjudicated",
+    "projectSlug": "sample-block-journey-refresh",
+    "taskType": "premortem",
+    "taskCategory": "risk-analysis",
+    "initiator": "codex",
+    "executionMode": "skill+scripts",
+    "approvalMode": "adaptive",
+    "privacyMode": "privacy-first-hybrid",
+    "retentionClass": "standard",
+    "artifactPath": "runs/2026/05/pmx-sample-block-journey-refresh-20260515T111516Z-54e222",
+    "registryRefs": {
+        "indexKey": "2026-05/pmx-sample-block-journey-refresh-20260515T111516Z-54e222"
+    },
+    "inputFingerprint": {
+        "contextHash": null,
+        "promptHash": null
+    },
+    "mode": "release-risk-gating",
+    "routingType": "hybrid",
+    "governanceAssets": {
+        "version": "v5a-1",
+        "prompt": {
+            "name": "Core Risk Governance Prompt",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/prompts/governance-prompt-core-risk-governance.md"
+        },
+        "overlay": {
+            "name": "Release Risk Gating Overlay",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/overlays/task-overlay-release-risk-gating.md"
+        },
+        "policyPack": {
+            "name": "Release Risk Core Policy Pack",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/policy-packs/policy-pack-release-risk-core.md"
+        },
+        "template": {
+            "name": "Release Risk Standard Summary Template",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/templates/template-card-release-risk-standard-summary.md"
+        },
+        "roleCards": [
+            {
+                "name": "Orchestrator",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/roles/role-card-orchestrator.md"
+            },
+            {
+                "name": "Evidence Auditor",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/roles/role-card-evidence-auditor.md"
+            },
+            {
+                "name": "Domain Risk Specialist",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/roles/role-card-domain-risk-specialist.md"
+            }
+        ],
+        "controlCards": [
+            {
+                "name": "High-Sensitivity Approval",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/governance/controls/control-card-high-sensitivity-approval.md"
+            }
+        ]
+    },
+    "workflowAssets": {
+        "version": "v5b-1",
+        "lifecycleMap": {
+            "name": "Core Release Risk Lifecycle Map",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/lifecycle/lifecycle-map-core-release-risk.md"
+        },
+        "stageDefinitions": [
+            {
+                "name": "Intake Stage Definition",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/stages/stage-definition-intake.md"
+            },
+            {
+                "name": "Assess Stage Definition",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/stages/stage-definition-assess.md"
+            }
+        ],
+        "approvalPlaybooks": [
+            {
+                "name": "High-Sensitivity Release Decision Approval Playbook",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/approvals/approval-playbook-high-sensitivity-release-decision.md"
+            }
+        ],
+        "handoffs": [
+            {
+                "name": "Assess To Deliberate Handoff Summary",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/handoffs/handoff-summary-assess-to-deliberate.md"
+            }
+        ],
+        "exceptionRules": [
+            {
+                "name": "Missing Evidence Re-entry Rule",
+                "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/workflow/exceptions/exception-rule-missing-evidence-reentry.md"
+            }
+        ],
+        "modeBinding": "release-risk-gating"
+    },
+    "runtimeAssets": {
+        "version": "v5c-1",
+        "controlTowerView": {
+            "name": "Default Release Risk Control Tower View",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/dashboards/control-tower-view-default-release-risk.md"
+        },
+        "governedRunFactsheet": {
+            "name": "Release Risk Governed Run Factsheet",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/factsheets/governed-run-factsheet-release-risk-synthetic.md"
+        },
+        "boundaryPanel": {
+            "name": "Release Risk Boundary And Enforcement Panel",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/policies/boundary-enforcement-panel-release-risk-synthetic.md"
+        },
+        "policyResolverRecord": {
+            "name": "Release Risk Policy Resolver Record",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/policies/policy-resolver-record-release-risk-synthetic.md"
+        },
+        "contextContract": {
+            "name": "Release Risk Context Contract",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/context/context-contract-release-risk-synthetic.md"
+        },
+        "runtimeTraceSummary": {
+            "name": "Release Risk Runtime Trace Summary",
+            "path": "C:/Users/georg/codex-project/Code-Plugin-Guru/plugins/premortemx/runtime/traces/runtime-trace-summary-release-risk-synthetic.md"
+        },
+        "modeBinding": "release-risk-gating"
+    },
+    "workflowState": {
+        "lifecycle": "Core Release Risk Lifecycle Map",
+        "currentStage": "Approve/Block",
+        "completedStages": [
+            "Intake",
+            "Assess",
+            "Deliberate"
+        ],
+        "nextStage": "Revisit",
+        "pendingApprovalPlaybook": "High-Sensitivity Release Decision Approval Playbook",
+        "activeExceptionRule": null,
+        "assessEntryStatus": "ready",
+        "assessEntryBlockers": [],
+        "deliberateHandoffStatus": "ready",
+        "handoffBlockers": [],
+        "gateStatus": "confirmation-required",
+        "allowedNextStage": null,
+        "blockedBy": [
+            "The current decision posture requires explicit confirmation before proceeding."
+        ]
+    },
+    "runtimeState": {
+        "activePolicyProfile": "release-risk-core",
+        "runtimeMode": "python-first local runtime",
+        "approvalPosture": "Tier B for sensitive Warn/Block outcomes",
+        "allowedEvidenceClasses": [
+            "designDocs",
+            "releasePlan",
+            "testEvidence",
+            "dependencies",
+            "architectureContext",
+            "implementationContext",
+            "advisoryDelegationUsed"
+        ],
+        "boundaryStatus": "clean",
+        "blockedContextClasses": [],
+        "carryForwardAllowed": true,
+        "transformationStatus": "transformed",
+        "carryForwardLedger": [],
+        "trustedInstructionSources": [
+            "Core Risk Governance Prompt",
+            "Release Risk Gating Overlay",
+            "Release Risk Core Policy Pack"
+        ],
+        "openBreaches": [],
+        "attentionItems": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle."
+        ],
+        "traceStatus": "completed",
+        "confirmationRequired": true,
+        "confirmationReason": "A Block decision must be explicitly escalated or reversed with new evidence before proceeding.",
+        "resumeGuidance": "Resume from `Revisit` when the next action items are complete.",
+        "proceedAllowed": false,
+        "proceedBlockers": [
+            "The current decision posture requires explicit confirmation before proceeding."
+        ]
+    },
+    "decision": "Block",
+    "confidenceBand": "Medium",
+    "inspectedInputs": {
+        "designDocs": [],
+        "architectureContext": [],
+        "implementationContext": [],
+        "releasePlan": [],
+        "testEvidence": [],
+        "dependencies": [],
+        "constraints": []
+    },
+    "riskSummary": {
+        "low": 0,
+        "medium": 0,
+        "high": 0
+    },
+    "topRisks": [
+        {
+            "role": "Security/Privacy Risk Specialist",
+            "recommendation": "Block",
+            "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
+            "evidenceRefs": [
+                "security/journey-refresh.md"
+            ]
+        },
+        {
+            "role": "Domain Risk Specialist",
+            "recommendation": "Warn",
+            "summary": "Core design can ship only if control evidence is tightened.",
+            "evidenceRefs": [
+                "design/journey-refresh.md"
+            ]
+        },
+        {
+            "role": "Operational/Release Risk Specialist",
+            "recommendation": "Warn",
+            "summary": "Operational rollout remains guardrailed but still recoverable.",
+            "evidenceRefs": [
+                "ops/journey-refresh.md"
+            ]
+        }
+    ],
+    "failedFutureFrame": "It is 6 months from now. This release plan has failed.",
+    "rawFailureReasons": [
+        {
+            "reasonId": "reason-1",
+            "title": "Domain Risk Specialist",
+            "reason": "Core design can ship only if control evidence is tightened.",
+            "decision": "Warn",
+            "sourceRole": "Domain Risk Specialist",
+            "evidenceRefs": [
+                "design/journey-refresh.md"
+            ]
+        },
+        {
+            "reasonId": "reason-2",
+            "title": "Operational/Release Risk Specialist",
+            "reason": "Operational rollout remains guardrailed but still recoverable.",
+            "decision": "Warn",
+            "sourceRole": "Operational/Release Risk Specialist",
+            "evidenceRefs": [
+                "ops/journey-refresh.md"
+            ]
+        },
+        {
+            "reasonId": "reason-3",
+            "title": "Security/Privacy Risk Specialist",
+            "reason": "Security evidence suggests a more severe blocker path than the broader team view.",
+            "decision": "Block",
+            "sourceRole": "Security/Privacy Risk Specialist",
+            "evidenceRefs": [
+                "security/journey-refresh.md"
+            ]
+        }
+    ],
+    "riskPathways": [
+        {
+            "pathId": "path-1",
+            "title": "Domain Risk Specialist",
+            "decision": "Warn",
+            "pathway": "Core design can ship only if control evidence is tightened.",
+            "failedFuture": "The release plan fails because this path materialized: Core design can ship only if control evidence is tightened.",
+            "failureStory": "It is 6 months from now. This release plan has failed. The failure became visible when core design can ship only if control evidence is tightened.",
+            "hiddenAssumptionId": "assumption-1",
+            "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "sourceRole": "Domain Risk Specialist",
+            "sourceRefs": [
+                "design/journey-refresh.md"
+            ],
+            "mostLikelyRank": 1,
+            "mostDangerousRank": 2
+        },
+        {
+            "pathId": "path-2",
+            "title": "Operational/Release Risk Specialist",
+            "decision": "Warn",
+            "pathway": "Operational rollout remains guardrailed but still recoverable.",
+            "failedFuture": "The release plan fails because this path materialized: Operational rollout remains guardrailed but still recoverable.",
+            "failureStory": "It is 6 months from now. This release plan has failed. The failure became visible when operational rollout remains guardrailed but still recoverable.",
+            "hiddenAssumptionId": "assumption-1",
+            "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "sourceRole": "Operational/Release Risk Specialist",
+            "sourceRefs": [
+                "ops/journey-refresh.md"
+            ],
+            "mostLikelyRank": 2,
+            "mostDangerousRank": 3
+        },
+        {
+            "pathId": "path-3",
+            "title": "Security/Privacy Risk Specialist",
+            "decision": "Block",
+            "pathway": "Security evidence suggests a more severe blocker path than the broader team view.",
+            "failedFuture": "The release plan fails because this path materialized: Security evidence suggests a more severe blocker path than the broader team view.",
+            "failureStory": "It is 6 months from now. This release plan has failed. The failure became visible when security evidence suggests a more severe blocker path than the broader team view.",
+            "hiddenAssumptionId": "assumption-1",
+            "hiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "earlyWarnings": [
+                "The current decision posture requires explicit confirmation before proceeding.",
+                "Escalate the blocked decision through the governed approval path."
+            ],
+            "preventionActions": [
+                "Escalate the blocked decision through the governed approval path.",
+                "Resolve the evidence gap before the next revisit cycle.",
+                "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+                "Resume from `Revisit` when the next action items are complete."
+            ],
+            "sourceRole": "Security/Privacy Risk Specialist",
+            "sourceRefs": [
+                "security/journey-refresh.md"
+            ],
+            "mostLikelyRank": 3,
+            "mostDangerousRank": 1
+        }
+    ],
+    "assumptionLedger": [
+        {
+            "assumptionId": "assumption-1",
+            "assumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+            "status": "monitor",
+            "hidden": false,
+            "source": "runtime:default",
+            "sourceRefs": [
+                "run-record.json"
+            ]
+        }
+    ],
+    "failureSynthesis": {
+        "summary": "3 likely failure path(s) and 0 hidden assumption(s) are active in the current harness state.",
+        "failedFuture": "The release plan fails because this path materialized: Core design can ship only if control evidence is tightened.",
+        "mostLikelyFailure": "Core design can ship only if control evidence is tightened.",
+        "mostDangerousFailure": "Core design can ship only if control evidence is tightened.",
+        "highestLeverageHiddenAssumption": "Current scope, evidence, and governance inputs are sufficient for the present decision posture.",
+        "revisedPlan": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ],
+        "preLaunchChecklist": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ],
+        "likelyFailurePathIds": [
+            "path-1",
+            "path-2",
+            "path-3"
+        ],
+        "hiddenAssumptionIds": [],
+        "earlyWarnings": [
+            "The current decision posture requires explicit confirmation before proceeding.",
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle."
+        ],
+        "preventionActions": [
+            "Escalate the blocked decision through the governed approval path.",
+            "Resolve the evidence gap before the next revisit cycle.",
+            "Escalate the blocked decision and resolve the evidence gap before re-entry.",
+            "Resume from `Revisit` when the next action items are complete."
+        ],
+        "mostLikelyFailurePathId": "path-1",
+        "mostDangerousFailurePathId": "path-1"
+    },
+    "evidenceCoverage": "incomplete",
+    "calibrationState": {
+        "promotionState": "excluded",
+        "datasetVersion": null,
+        "caseId": null
+    },
+    "executionBoundary": {
+        "authorityMode": "local-only",
+        "advisoryMode": "cloud-only-advisory",
+        "advisoryDelegationAllowed": true,
+        "advisoryDelegationUsed": []
+    },
+    "deliberation": {
+        "version": "3.0",
+        "adjudicatedBy": "orchestrator",
+        "status": "completed",
+        "sharedRoles": [
+            "Evidence Auditor",
+            "Decision Policy Reviewer",
+            "Orchestrator"
+        ],
+        "specialistRoles": [
+            "Domain Risk Specialist",
+            "Operational/Release Risk Specialist",
+            "Security/Privacy Risk Specialist"
+        ],
+        "specialists": [
+            {
+                "role": "Domain Risk Specialist",
+                "recommendation": "Warn",
+                "summary": "Core design can ship only if control evidence is tightened.",
+                "evidenceRefs": [
+                    "design/journey-refresh.md"
+                ],
+                "rubric": {
+                    "confidence": 3,
+                    "evidenceStrength": 3,
+                    "riskSeverity": 3,
+                    "evidenceCompleteness": 4,
+                    "disagreementLevel": 3,
+                    "policyFit": 3,
+                    "decisionSensitivity": 3
+                }
+            },
+            {
+                "role": "Operational/Release Risk Specialist",
+                "recommendation": "Warn",
+                "summary": "Operational rollout remains guardrailed but still recoverable.",
+                "evidenceRefs": [
+                    "ops/journey-refresh.md"
+                ],
+                "rubric": {
+                    "confidence": 3,
+                    "evidenceStrength": 3,
+                    "riskSeverity": 3,
+                    "evidenceCompleteness": 4,
+                    "disagreementLevel": 3,
+                    "policyFit": 3,
+                    "decisionSensitivity": 3
+                }
+            },
+            {
+                "role": "Security/Privacy Risk Specialist",
+                "recommendation": "Block",
+                "summary": "Security evidence suggests a more severe blocker path than the broader team view.",
+                "evidenceRefs": [
+                    "security/journey-refresh.md"
+                ],
+                "rubric": {
+                    "confidence": 4,
+                    "evidenceStrength": 5,
+                    "riskSeverity": 4,
+                    "evidenceCompleteness": 4,
+                    "disagreementLevel": 3,
+                    "policyFit": 3,
+                    "decisionSensitivity": 4
+                }
+            }
+        ],
+        "agreement": {
+            "consensusDecision": "Warn",
+            "disagreementLevel": 3,
+            "summary": "Consensus began at Warn with disagreement level 3."
+        },
+        "rubric": {
+            "gradingScale": "1-5",
+            "confidence": 3,
+            "evidenceStrength": 4,
+            "riskSeverity": 4,
+            "evidenceCompleteness": 4,
+            "disagreementLevel": 3,
+            "policyFit": 3,
+            "decisionSensitivity": 4,
+            "sourceProvenance": 3,
+            "mitigationReadiness": 3,
+            "calibratedPatternFit": 3,
+            "contradictoryArtifactPressure": 1
+        },
+        "overrideModel": {
+            "defaultTrigger": "evidence-gated",
+            "backstopTrigger": "severity-and-policy",
+            "overrideApplied": true,
+            "overrideReason": "Severity-and-policy override: a credible high-severity risk met the escalation threshold.",
+            "humanEscalationRequired": false,
+            "humanEscalationReasons": [],
+            "overrideTestSummary": "Severity-and-policy override: a credible high-severity risk met the escalation threshold."
+        },
+        "adjudication": {
+            "finalDecision": "Block",
+            "finalConfidenceBand": "Medium",
+            "summary": "Severity-and-policy override: a credible high-severity risk met the escalation threshold.",
+            "supportingEvidence": [
+                "security/journey-refresh.md",
+                "design/journey-refresh.md",
+                "ops/journey-refresh.md"
+            ],
+            "decisionOwner": null,
+            "ruleTriggered": "severity-and-policy",
+            "humanEscalationConsidered": false,
+            "residualRiskAfterMitigation": "Medium",
+            "decisionPath": [
+                "Consensus began at Warn with disagreement level 3.",
+                "Overall confidence resolved to 3 on the internal 1-5 scale.",
+                "Minimum evidence completeness resolved to 4 and minimum policy fit resolved to 3.",
+                "Override path: Severity-and-policy override: a credible high-severity risk met the escalation threshold."
+            ],
+            "uncertaintyDrivers": []
+        }
+    },
+    "warnReasons": [],
+    "blockReasons": [],
+    "outputTiers": [
+        "short",
+        "standard",
+        "exec"
+    ],
+    "permissionEscalationsRequested": [],
+    "permissionEscalationsApproved": [],
+    "guardrailRecommendations": [],
+    "override": {
+        "applied": false,
+        "rationale": null,
+        "mitigationSteps": [],
+        "responsibleOwner": null
+    },
+    "sensitivityReview": {
+        "likelySensitive": false,
+        "recommendedProtection": "none",
+        "encryptionUsed": false
+    },
+    "artifacts": {
+        "startHere": "start-here.md",
+        "journeyView": "journey-view.html",
+        "journeyData": "journey-view.json",
+        "summaryShort": "summary-short.md",
+        "summaryStandard": "summary-standard.md",
+        "summaryExec": "summary-exec.md",
+        "premortemReport": "premortem-report.html",
+        "premortemTranscript": "premortem-transcript.md",
+        "riskRegister": "risk-register.md",
+        "runRecord": "run-record.json",
+        "analysis": "analysis.json",
+        "approvals": "approvals.json",
+        "retention": "retention.json",
+        "override": null,
+        "evidenceIndex": "evidence-index.md",
+        "deliberation": "deliberation.json"
+    },
+    "qualityFollowup": {
+        "status": "pending",
+        "reviewDue": null,
+        "falsePositiveNotes": [],
+        "missedRiskNotes": [],
+        "outcomeNotes": []
+    }
+}

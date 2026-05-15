@@ -1,6 +1,6 @@
 # PreMortemX Journey Example Bundle
 
-This example bundle is a sanitized, synthetic `Block` assessment showing the first `v6a` visual risk-journey surface.
+This example bundle is a sanitized, synthetic `Block` run showing the current `v6a` failed-future journey surface.
 
 Included artifacts:
 
@@ -11,13 +11,17 @@ Included artifacts:
 - `evidence-index.md`
 - `deliberation.json`
 - `approvals.json`
+- `run-record.json`
+- `premortem-report.html`
+- `premortem-transcript.md`
 - `journey-view.json`
 - `journey-view.html`
 
-Use it to review:
+Use it to inspect:
 
-- the governed lifecycle rail
-- branch and blocker progression
-- approval and resume path clarity
-- the visual gate-card surface
-- how the agent-team and harness story can be presented above the underlying artifacts
+- explicit failed-future framing and six-month projection cue
+- raw failure reasons and ranked likely failure paths
+- richer branch comparison beyond the top-path pair
+- rubric-based classification, adjudication delta, and residual monitor
+- visible harness and agent-team contribution
+- governed blocker, approval, and resume state derived from canonical artifacts

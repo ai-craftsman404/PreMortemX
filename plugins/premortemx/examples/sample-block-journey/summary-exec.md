@@ -1,7 +1,7 @@
 # PreMortemX Release Assessment
 
-- Run ID: pmx-v6a-inspection-20260513T163504Z-1658e4
-- Created: 2026-05-13 16:35:04.050618 UTC
+- Run ID: pmx-sample-block-journey-refresh-20260515T111516Z-54e222
+- Created: 2026-05-15 11:15:16.470914 UTC
 - Recommendation: Block
 - Confidence: Medium
 
@@ -9,11 +9,15 @@
 
 - Add the executive-facing release recommendation here.
 
+## Failed-Future Frame
+
+- It is 6 months from now. This release plan has failed.
+
 ## Run Status
 
 - Current stage: `Approve/Block`
 - Next stage: `Revisit`
-- Gate status: `awaiting-human-escalation`
+- Gate status: `confirmation-required`
 - Assess entry status: `ready`
 - Deliberate handoff status: `ready`
 - Boundary status: `clean`
@@ -27,14 +31,25 @@
 ## Top Blockers
 
 - Add the most important blockers or concerns here.
+- Core design can ship only if control evidence is tightened.
+- Operational rollout remains guardrailed but still recoverable.
+- Security evidence suggests a more severe blocker path than the broader team view.
 
 ## Mitigation Path
 
-- Add the executive-facing mitigation path here.
+- Escalate the blocked decision through the governed approval path.
+- Resolve the evidence gap before the next revisit cycle.
+- Escalate the blocked decision and resolve the evidence gap before re-entry.
 
 ## Proceed Conditions
 
 - Record what must be true before proceeding.
+
+## Five-Part Synthesis
+
+- Most likely failure: Core design can ship only if control evidence is tightened.
+- Most dangerous failure: Core design can ship only if control evidence is tightened.
+- Hidden assumption: Current scope, evidence, and governance inputs are sufficient for the present decision posture.
 
 ## Residual Risk If Proceeding
 
@@ -42,7 +57,7 @@
 
 ## Next Action
 
-- Next action summary: Escalate the current decision before the run can return for revisit.
+- Next action summary: Escalate the blocked decision and resolve the evidence gap before re-entry.
 - Escalate the blocked decision through the governed approval path.
 - Resolve the evidence gap before the next revisit cycle.
 
@@ -50,10 +65,9 @@
 
 - Proceed allowed: `No`
 - Confirmation required: `Yes`
-- Confirmation reason: Human escalation is required before the workflow can proceed.
-- Resume guidance: Resume from `Revisit` after resolving the active exception rule.
-- Blocker: An active exception rule must be resolved before proceeding.
-- Blocker: Human escalation is required before proceeding.
+- Confirmation reason: A Block decision must be explicitly escalated or reversed with new evidence before proceeding.
+- Resume guidance: Resume from `Revisit` when the next action items are complete.
+- Blocker: The current decision posture requires explicit confirmation before proceeding.
 
 ## Key Point Summary
 

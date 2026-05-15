@@ -1,7 +1,7 @@
 # PreMortemX Risk Register
 
-- Run ID: pmx-v6a-inspection-20260513T163504Z-1658e4
-- Created: 2026-05-13 16:35:04.050618 UTC
+- Run ID: pmx-sample-block-journey-refresh-20260515T111516Z-54e222
+- Created: 2026-05-15 11:15:16.470914 UTC
 
 ## Scope Reviewed
 

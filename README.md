@@ -127,6 +127,28 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 ---
 
+## Visual Proof
+
+This is the current visual journey-view artifact generated from a governed `Block` run:
+
+<img src="assets/premortemx-v6a-journey-showcase.png" alt="PreMortemX v6a journey view showing failed-future framing, classified risk branches, blocker precedence, branch comparison, and the gate control panel." width="960">
+
+- [Journey example README](plugins/premortemx/examples/sample-block-journey/README.md)
+- [Journey view HTML](plugins/premortemx/examples/sample-block-journey/journey-view.html)
+- [Journey view JSON](plugins/premortemx/examples/sample-block-journey/journey-view.json)
+- [Journey start-here](plugins/premortemx/examples/sample-block-journey/start-here.md)
+- [Journey approvals](plugins/premortemx/examples/sample-block-journey/approvals.json)
+
+Why this matters:
+
+- the agent-team and harness path is visible
+- classification is rubric-based instead of ad hoc
+- branch comparison is visible beyond only the top two paths
+- blocker, approval, and re-entry state are visible in one surface
+- the visual layer is still derived from auditable governed artifacts
+
+---
+
 ## Real Example Bundle
 
 Review a committed sanitized `v5` governed example bundle here:
@@ -151,25 +173,6 @@ This is a realistic `Warn` example, included so visitors can inspect the current
 - risk register depth
 - adjudication artifact shape
 - governed workflow and boundary state
-
-### `v6a` Journey Surface Preview
-
-This is the first visual journey-view artifact generated from a governed `Block` run:
-
-<img src="assets/premortemx-v6a-journey-showcase.png" alt="PreMortemX v6a journey view showing the governed lifecycle rail, risk branches, blockers, and gate control panel." width="960">
-
-- [Journey example README](plugins/premortemx/examples/sample-block-journey/README.md)
-- [Journey view HTML](plugins/premortemx/examples/sample-block-journey/journey-view.html)
-- [Journey view JSON](plugins/premortemx/examples/sample-block-journey/journey-view.json)
-- [Journey start-here](plugins/premortemx/examples/sample-block-journey/start-here.md)
-- [Journey approvals](plugins/premortemx/examples/sample-block-journey/approvals.json)
-
-This preview is important because it shows `PreMortemX` as more than a report generator:
-
-- the agent-team and harness path is visible
-- blocker precedence is visible
-- resume and re-entry behavior is visible
-- the visual layer is still derived from auditable governed artifacts
 
 ---
 
@@ -213,7 +216,7 @@ flowchart LR
 | `v3` | Governed decision system | Added specialist agent-team deliberation, orchestrator adjudication, calibration storage, promotion states, and approval-controlled calibration changes |
 | `v4` | Cross-platform runtime | Moved to a Python-first runtime, kept PowerShell fallback, and validated Windows plus Linux runtime behavior |
 | `v5` | Governed execution environment | Added prompt/workflow/runtime asset layers, gate-state enforcement, boundary/context controls, stronger operator-facing run artifacts, and higher-assurance synthetic/adversarial validation |
-| `v6a` | Visual risk journey | Added the first derived `journey-view` surface with lifecycle rail, branch flow, gate control, and resume-path visualization |
+| `v6a` | Visual risk journey | Added the first derived `journey-view` surface with failed-future framing, lifecycle rail, branch comparison, classification, gate control, and resume-path visualization |
 
 ---
 
