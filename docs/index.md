@@ -33,10 +33,10 @@ $premortemx Validate this architecture and identify the top design risks before 
 
 ![Focused previews](assets/premortemx-focused-previews.png)
 
-- [Executive summary](../plugins/premortemx/examples/sample-warn-release/summary-exec.md)
-- [Start here](../plugins/premortemx/examples/sample-warn-release/start-here.md)
-- [Approvals](../plugins/premortemx/examples/sample-warn-release/approvals.json)
-- [Risk register](../plugins/premortemx/examples/sample-warn-release/risk-register.md)
+- [Executive summary](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-warn-release/summary-exec.md)
+- [Start here](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-warn-release/start-here.md)
+- [Approvals](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-warn-release/approvals.json)
+- [Risk register](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-warn-release/risk-register.md)
 
 ## Visual journey surface
 
@@ -44,9 +44,9 @@ The current `v6a` journey-view artifact turns the agent-team and harness path in
 
 ![V6A journey surface](assets/premortemx-v6a-journey-showcase-journeyfirst.png)
 
-- [Journey example](../plugins/premortemx/examples/sample-block-journey/README.md)
-- [Journey HTML](../plugins/premortemx/examples/sample-block-journey/journey-view.html)
-- [Journey JSON](../plugins/premortemx/examples/sample-block-journey/journey-view.json)
+- [Journey example](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-block-journey/README.md)
+- [Journey HTML](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-block-journey/journey-view.html)
+- [Journey JSON](https://github.com/ai-craftsman404/PreMortemX/blob/main/plugins/premortemx/examples/sample-block-journey/journey-view.json)
 
 ## Validated platforms
 
